@@ -8,116 +8,170 @@
     <title>Laravel</title>
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-
+    <script src="https://kit.fontawesome.com/1ed92467bb.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 
     <style>
-        body {
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
             font-family: 'Montserrat', sans-serif;
         }
 
         .container2 {
-            margin-left: 100px;
-            margin-right: 100px;
-            justify-content: center;
+            margin: 5%;
         }
 
-        .address {
-            margin: 30px 0;
-            display: flex;
-        }
-
-        .address img {
-            padding-top: 12px;
-            padding-right: 20px;
-        }
-
-        .address .arrow {
-            width: 15px;
-            height: 15px;
-            padding-top: 16px;
-            padding-right: 20px;
-        }
-
-        .address p {
-            /* identical to box height */
-            color: #D2B48C;
-            padding-right: 20px;
-        }
-
-        .container2 .poster {
+        .container2 img {
             width: 100%;
         }
 
-        .container2 .img {
-            position: relative;
-        }
-
-        .name {
-            font-weight: 400;
-            font-size: 28px;
-            line-height: 29px;
-            /* identical to box height */
-            color: #0071BB;
-            padding: 40px 0 30px;
-        }
-
-        .container3 p {
-            font-weight: 400;
-            font-size: 20px;
+        .container3 {
+            margin: 5%;
             line-height: 30px;
-            /* or 150% */
-            color: #000000;
-            padding-bottom: 20px;
+        }
+
+        .container3 i {
+            padding-right: 10px;
+            color: black;
+        }
+
+        .container3 a {
+            text-decoration: none;
+        }
+
+        .container3 span a {
+            color: black;
+        }
+
+        .container3 i:hover,
+        .container3 span a:hover {
+            color: #008DD0;
+        }
+
+        .container3 span {
+            color: #2565AE;
+            font-size: 16px;
+            font-weight: 600;
         }
 
         .container4 {
-            background: rgba(213, 243, 254, 0.4);
+            margin: 5%;
         }
 
-        .container5 {
-            margin: 0 100px;
-            justify-content: center;
+        .container4 .title,
+        .container6 .title,
+        .container10 .title {
+            margin-bottom: 3%;
+            font-size: 24px;
+            line-height: 29px;
+            color: #0071BB;
+            font-weight: 700;
         }
 
-        .container5 ul {
-            list-style: none;
-        }
-
-        .container5 ul li {
-            padding-bottom: 30px;
-            font-size: 20px;
-        }
-
-        .container5 ul li span {
-            width: 30px;
-            height: 30px;
-            background: #66d3fa;
-            color: white;
-            padding: 5px 9px;
-            border-radius: 50%;
-            margin-right: 10px;
+        .container4 p {
+            margin-bottom: 3%;
+            line-height: 30px;
             font-size: 18px;
         }
 
+        .container5 {
+            background: rgba(213, 243, 254, 0.4);
+            font-size: 18px;
+        }
+
+        .container6 {
+            margin: 0 5%;
+            padding: 3% 0;
+        }
+
         .container7 {
-            margin: 0 100px;
-            justify-content: center;
+            margin: 5%;
         }
 
         .container8 {
-            width: 100%;
-            justify-content: space-between;
-
-
+            display: flex;
+            margin-bottom: 3%;
         }
 
-        .container8 img {
-            padding-right: 55px;
+        .container8 span {
+            background: red;
+            width: 20px;
+            height: 20px;
+            background: #01B3EE;
+            border-radius: 30px;
+            text-align: center;
+            color: white;
+            margin-right: 3%;
         }
 
-        .container8 img:last-of-type {
-            padding-right: 0;
+        .container10 {
+            margin: 5%;
+        }
+
+        .container9 {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .container9 img {
+            width: calc(100% / 3 - 20px);
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+
+        .container9 img:last-child {
+            margin-right: 0;
+        }
+
+        .container9 img:hover {
+            transition: all 0.2s ease;
+            transform: translate(5px, 5px);
+            opacity: 1;
+            box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.4);
+        }
+
+        @media all and (max-width:1045px) {
+            .container9 {
+                flex-wrap: wrap;
+            }
+
+            .container9 img {
+                width: calc(100% /2 - 20px);
+            }
+        }
+
+        @media all and (max-width:700px) {
+
+            .container4 p,
+            .container5 p {
+                font-size: 16px;
+            }
+
+            .container4 p {
+                margin-bottom: 5%
+            }
+
+            .container4 {
+                margin-bottom: 5%;
+            }
+
+            .title {
+                margin-bottom: 5%;
+            }
+
+            .container4 p {
+                text-align: justify;
+            }
+
+            .container9 img {
+                width: 100%;
+                margin-right: 0;
+                margin-bottom: 5%;
+            }
         }
     </style>
 </head>
@@ -125,67 +179,71 @@
 <!-- <body> -->
 
 <body>
+
     @include('layouts.nav')
 
+    <!-- content -->
     <div class="container2">
-        <div class="address">
-            <span><img src="img/home.png" alt=""></span>
-            <span><img class="arrow" src="img/arrow.png" alt=""></span>
-            <p>New Servicies</p>
-            <span><img class="arrow" src="img/arrow.png" alt=""></span>
-            <p>Student Development Services</p>
-        </div>
-        <div class="img">
-            <img class="poster" src="img/C-services/poster3.png" alt="">
-
-        </div>
-        <p class="name">Service Introduction</p>
-        <div class="container3">
-            <p>BGCA has been providing educational psychological services since September 2004, with the addition of
-                clinical psychological services in May 2006. In cooperation with schools and parents/caregivers, the
-                initiative provides professional psychological support services to assist children and youth with
-                various needs.</p>
-            <p>The Service recruits qualified clinical/educational psychologists to provide a range of psychological
-                services, including psychological assessment and diagnosis, case counselling and more, to children,
-                youth and parents/caregivers in need of adjustment to their learning, family and social environments.
-                Consultation services and trainings are also provided to professionals such as teachers and social
-                workers.</p>
-        </div>
+        <img src="img/C-services/poster3.png" alt="">
     </div>
+
+    <div class="container3">
+        <a href=""> <i class="fa-solid fa-house"></i></a>
+        <i class="fa-solid fa-chevron-right"></i>
+        <span class="title"><a href="">New Services</a> </span>
+        <i class="fa-solid fa-chevron-right"></i>
+        <span class="title">Student Development Services</span>
+    </div>
+
     <div class="container4">
-        <div class="container5">
-            <p class="name">Target Service Users</p>
-            <ul>
-                <li><span>1</span> Children & Youth</li>
-                <li><span>2</span> Parent/Caregivers</li>
-                <li><span>3</span> Children & Youth</li>
-                <li><span>4</span> Parent/Caregivers</li>
-            </ul>
-        </div>
-    </div>
-    <div class="container2">
-        <p class="name">Scrope of Service</p>
-        <div class="container3">
-            <p>Psychological assessment - including intellectual assessment and assessment of dyslexia, attention
-                deficit/hyperactivity disorder (ADHD), and autism spectrum disorder (ASD) etc.</p>
-            <p>Psychological treatment - mainly assists children and youth with difficulties adjusting to their
-                learning, family and social environments.
-            </p>
-            <p>Professional training - mainly supports our staff's provision of services. The Service also provides
-                knowledge related to children and youth's psychological development to external parties including
-                professionals (e.g., teachers and social workers) and members of the community. </p>
-
-        </div>
+        <div class="title">Service Intorduction</div>
+        <p>BGCA has been providing educational psychological services since September 2004, with the addition of
+            clinical psychological services in May 2006. In cooperation with schools and parents/caregivers, the
+            initiative provides professional psychological support services to assist children and youth with various
+            needs.</p>
+        <p>The Service recruits qualified clinical/educational psychologists to provide a range of psychological
+            services, including psychological assessment and diagnosis, case counselling and more, to children, youth
+            and parents/caregivers in need of adjustment to their learning, family and social environments. Consultation
+            services and trainings are also provided to professionals such as teachers and social workers.</p>
     </div>
 
-    <div class="container7">
-        <p class="name">Event Photos</p>
-        <div class="container8">
-            <img src="img/C-services/event-img1.png" alt="">
-            <img src="img/C-services/event-img2.png" alt="">
-            <img src="img/C-services/event-img3.png" alt="">
+    <div class="container5">
+        <div class="container6">
+            <div class="title">Target Service Users</div>
+            <div class="container7">
+                <div class="container8">
+                    <span>1</span>
+                    <p>Children & Youth</p>
+                </div>
+                <div class="container8">
+                    <span>2</span>
+                    <p>Parents/Caregivers</p>
+                </div>
+                <div class="container8">
+                    <span>3</span>
+                    <p>Parents/Caregivers</p>
+                </div>
+                <div class="container8">
+                    <span>4</span>
+                    <p>Members of the community</p>
+                </div>
+
+            </div>
         </div>
     </div>
+
+    <div class="container10">
+        <div class="title">Relatived Images</div>
+        <div class="container9">
+            <img src="img/img1 (1).png" alt="">
+            <img src="img/img2 (1).png" alt="">
+            <img src="img/img3 (1).png" alt="">
+            <img src="img/img4 (1).png" alt="">
+            <img src="img/img1 (1).png" alt="">
+            <img src="img/img6 (1).png" alt="">
+        </div>
+    </div>
+
 
     @include('layouts.footer')
 

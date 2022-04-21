@@ -6,13 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Laravel</title>
-    <script src="https://kit.fontawesome.com/1ed92467bb.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-
+    <script src="https://kit.fontawesome.com/1ed92467bb.js" crossorigin="anonymous"></script>
 
     <style>
         * {
@@ -172,6 +171,14 @@
             opacity: 0.7;
         }
 
+<<<<<<< HEAD
+=======
+        button.submit a {
+            text-decoration: none;
+            color: white;
+        }
+
+>>>>>>> tmp
         /* responsive */
         @media(max-width:780px) {
             .body {
@@ -216,9 +223,15 @@
                             <input type="password" placeholder="password" class="field error">
                             <i class="fa-solid fa-lock"></i>
                         </div>
+<<<<<<< HEAD
                         <p class="remind"><a href="">Don't have account?</a></p>
 
                         <button class="submit">Login</button>
+=======
+                        <p class="remind"><a href="{{ url('registration') }}">Don't have account?</a></p>
+
+                        <button class="submit"><a href="{{ url('record') }}">Login</a> </button>
+>>>>>>> tmp
                     </form>
                 </div>
             </section>

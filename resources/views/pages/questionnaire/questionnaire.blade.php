@@ -305,13 +305,15 @@
             <h1>Kessler Psychological Distress Inventory (K10)</h1>
             <h3>What is K10?</h3>
             <p>The Kessler Psychological Distress Scale (K10) is a psychological screening tool designed to identify
-                adults with significant levels of psychological distress. It is widely used in Australia and often used
+                adults with significant levels of psychological distress. It is widely used in Australia and often
+                used
                 in primary care settings to identify people with clinically significant psychological distress.</p>
         </div>
     </header>
 
     <div class="container3">
-        <p class="info">This is a small test to assess your level of mental distress. Here are some questions that ask
+        <p class="info">This is a small test to assess your level of mental distress. Here are some questions that
+            ask
             you about your emotions. For each question, select the option that best describes how often the emotion
             occurs.</p>
         <p class="message error-message">*Please enter all the questions.</p>
@@ -388,7 +390,8 @@
                 <input type="radio" name="question" id="dot3-4">
                 <input type="radio" name="question" id="dot3-5">
                 <span class="message error-message">*This question had not answered yet.</span>
-                <span class="question-title">3. During the past 1 month, how often did you feel so nervous that nothing
+                <span class="question-title">3. During the past 1 month, how often did you feel so nervous that
+                    nothing
                     could calm you down?</span>
                 <div class="category">
                     <label for="dot3-1">
@@ -581,7 +584,8 @@
                 <input type="radio" name="question" id="dot9-4">
                 <input type="radio" name="question" id="dot9-5">
                 <span class="message error-message">*This question had not answered yet.</span>
-                <span class="question-title">9. During the past 1 month, how often did you feel that everything was an
+                <span class="question-title">9. During the past 1 month, how often did you feel that everything was
+                    an
                     effort?</span>
                 <div class="category">
                     <label for="dot9-1">
@@ -643,7 +647,6 @@
             </div>
         </form>
     </div>
-
 
     @include('layouts.footer')
 

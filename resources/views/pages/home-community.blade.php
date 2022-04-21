@@ -10,129 +10,139 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1ed92467bb.js" crossorigin="anonymous"></script>
 
     <style>
-        .container2 {
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
             font-family: 'Montserrat', sans-serif;
-            margin-bottom: 80px;
         }
 
-        .poster .p-img {
+        header {
             width: 100%;
-        }
-
-        .new {
-            margin-left: 100px;
-            margin-right: 100px;
+            height: 100vh;
+            background-image: url("img/poster.png");
+            background-position: bottom;
+            background-size: cover;
+            display: flex;
             justify-content: center;
-            background: #fafafa;
+            align-items: center;
+            text-align: center;
         }
 
-        .new img {
+        header .info {
+            color: black;
+            font-size: 40px;
+            width: 80%;
+            margin-top: -20%;
+            text-align: center;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            cursor: pointer;
+
+        }
+
+        header .info:hover {
+            visibility: visible;
+            transform: translateY(70px);
+            transition: all 0.3s ease;
+        }
+
+        .container2 {
+            margin: 30px 5%;
+        }
+
+        .container2 .type,
+        .container4 .type {
+            font-size: 30px;
+            line-height: 39px;
+            color: #43B8D2;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .container3 img {
             width: 100%;
         }
 
-        .type {
-            display: block;
-            background: white;
-            font-style: normal;
+        .container2 .title {
             font-weight: 700;
-            font-size: 32px;
-            line-height: 30px;
-            color: #43B8D2;
-            margin: 65px 0 36px;
-        }
-
-        .name {
-            font-weight: 600;
-            font-size: 24px;
+            font-size: 28px;
+            line-height: 29px;
             color: #663399;
-            font-family: 'Montserrat', sans-serif;
+            margin: 30px 0 20px;
+            font-weight: 700;
         }
 
-        .name.youth {
-            color: #FF4500;
-        }
-
-        .info {
-            font-weight: 400;
-            font-size: 18px;
+        .container2 .info {
+            font-size: 20px;
             line-height: 40px;
             /* or 200% */
+
             letter-spacing: 0.02em;
-            color: #000000;
-            font-family: 'Montserrat', sans-serif;
-            padding-bottom: 10px;
+            font-weight: 600;
+            margin-bottom: 30px;
         }
 
-        .info.youth {
-            line-height: 24px;
-        }
-
-        .btn {
-            background: red;
+        .btn-more {
             display: inline-block;
-            padding: 5px 38px;
-            background: rgba(102, 51, 153, 0.9);
-            border-radius: 10px;
-            curson: pointer;
-        }
-
-        .btn.youth {
-            background: rgba(255, 69, 0, 0.9);
-        }
-
-        .btn a {
-            font-weight: 600;
+            text-align: start;
             font-size: 16px;
-            line-height: 29px;
-            /* identical to box height */
-            color: #FFFFFF;
+            background: #FF4500;
+            border-radius: 10px;
+            padding: 11px 47px;
             text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        .btn-more a {
             text-decoration: none;
+            color: white;
         }
 
-        .btn:hover {
-            background: #663399;
+        .btn-more:hover {
+            transition: all 0.3s ease;
+            transform: translateY(5px);
         }
 
-        .btn.youth:hover {
-            background: red;
+        .container2 .info {
+            font-size: 16px;
         }
 
-        .container3 {
-            background: white;
-            margin-left: 100px;
-            margin-right: 100px;
-            justify-content: center;
+        .container4 .type {
+            margin: 30px 5%;
         }
 
-        .donate {
+        .container5 {
             display: flex;
-            margin-left: 20px;
-            position: relative;
-            margin-top: 100px;
+            margin: 0 5%;
         }
 
-        .donate img {
-            width: 310px;
-            margin-left: 7%;
+        .container5 .info {
+            text-align: justify;
+            padding-bottom: 40px;
         }
 
-        .donate .donate-info {
-            position: absolute;
-            top: -70px;
-            width: 734px;
-            right: 3%;
-            font-size: 20px;
-            font-weight: 600;
-            line-height: 40px;
+        @media all and (max-width:600px) {
+            .container5 {
+                flex-wrap: wrap;
+            }
+
         }
 
-        .donate .donate-info p:nth-child(2) {
-            padding-top: 30px;
+        @media all and (max-width:1045px) {
+            .container2 .title {
+                font-size: 22px;
+            }
+
         }
     </style>
+
 </head>
 
 <!-- <body> -->
@@ -140,31 +150,70 @@
 <body>
     @include('layouts.nav')
 
-    <div class="poster">
-        <img class="p-img" src="img/poster.png" alt="">
-    </div>
+    <!-- content -->
+    <header>
+        <p class="info slogo">
+            Boundless compassion solidarity in action
+        </p>
+    </header>
+
 
     <div class="container2">
-        <!-- new servies -->
-        <div class="new">
-            <p class="type">New Program</p>
-            <div class="poster2">
-                <img src="img/new-program.png" alt="">
-            </div>
+        <p class="type">New Service</p>
+        <div class="container3">
+            <img src="img/new-program.png" alt="">
+        </div>
+        <p class="title">
+            智親至愛照顧者支援計劃
+        </p>
+        <p class="info">
+            In the late 19th Century, abduction and trafficking of women and children were serious crimes in Hong Kong.
+            On 8th November, 1878, a group of local Chinese presented a petition to the Governor, Sir John Pope
+            Hennessy, K.C.M.G., to set up Po Leung Kuk to rescue the kidnapped victims. The “Society for the Protection
+            of Women and Children” was approved by the Hong Kong Governor in May, 1880, but as the petition was
+            submitted on 8th November, 1878, that date was adopted as our founding date.
+        </p>
+        <div class="btn-more">
+            <a href="{{ url('services1') }}">More</a>
+        </div>
 
-            <p class="name">Wisdom and Love Carer Support Project</p>
-            <p class="info">In the late 19th Century, abduction and trafficking of women and children were serious
-                crimes in Hong Kong. On 8th November,
-                1878, a group of local Chinese presented a petition to the Governor, Sir John Pope Hennessy, K.C.M.G.,
-                to set up Po Leung Kuk to rescue the kidnapped victims.
-                The “Society for the Protection of Women and Children” was approved by the Hong Kong Governor in May,
-                1880, but as the petition was submitted on 8th November,
-                1878, that date was adopted as our founding date.
-            </p>
-            <div class="btn">
-                <a href="">more</a>
+    </div>
+    <div class="container2 two">
+        <p class="type">New Activities</p>
+        <div class="container3">
+            <img src="img/new-activities.png" alt="">
+        </div>
+        <p class="title">
+            March - April Science Camp
+        </p>
+        <p class="info">
+            "Summer" holiday comes earlier than expected but let's make the most of it! We are hosting summer camps that
+            will make it the best holiday ever!
+        </p>
+        <p class="info">*All summer camps are online camps. Online camps will be held via Zoom. Rest assured, we keep
+            the class sizes small and deliver the experiment materials straight to your doorstep! All you need to
+            prepare is a pencil, some water and the spirit to experiment!</p>
+        <div class="btn-more">
+            <a href="{{ url('activity') }}">More</a>
+        </div>
+
+    </div>
+
+    <div class="container4">
+        <p class="type">Quick Donate</p>
+        <div class="container5">
+            <img src="img/Donate.png" alt="">
+            <div class="container6">
+                <p class="info">Let's support us, your generous donation can help to provide timely assistance to the
+                    affected grassroots people. Every HK$350 you donate will enable a person with low-income, jobless or
+                    in need to receive hot meals / food coupons for a week, your donation can also help us to carry out
+                    other all-round supporting services.
+                </p>
+                <p class="info">All administrative expenses of this programme are sponsored by the Kuk’s Board of
+                    Directors.</p>
             </div>
         </div>
+    </div>
 
         <div class="container2">
             <!-- new servies -->
@@ -173,42 +222,7 @@
                 <div class="poster2">
                     <img src="img/new-activities.png" alt="">
 
-                </div>
-
-                <p class="name youth">March - April Science Camp</p>
-                <p class="info youth">"Summer" holiday comes earlier than expected but let's make the most of it! We are
-                    hosting summer
-                    camps that will make it the best holiday ever!
-                </p>
-                <p class="info youth">*All summer camps are online camps. Online camps will be held via Zoom. Rest
-                    assured, we keep the class sizes small and deliver the experiment materials straight to your
-                    doorstep! All you need to prepare is a pencil,
-                    some water and the spirit to experiment!
-                </p>
-                <div class="btn youth">
-                    <a href="">more</a>
-                </div>
-            </div>
-
-            <div class="container3">
-                <p class="type">Quick Donation</p>
-                <div class="donate">
-                    <img src="img/Donate.png" alt="">
-                    <div class="donate-info">
-                        <p>Let's support us, your generous donation can help to provide timely assistance to the
-                            affected grassroots people.
-                            Every HK$350 you donate will enable a person with low-income, jobless or in need to receive
-                            hot meals / food coupons for a week,
-                            your donation can also help us to carry out other all-round supporting services.
-                        </p>
-                        <p>
-                            All administrative expenses of this programme are sponsored by the Kuk’s Board of Directors.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        @include('layouts.footer')
+    @include('layouts.footer')
 
 </body>
 

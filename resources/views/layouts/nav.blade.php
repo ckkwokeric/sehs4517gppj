@@ -32,7 +32,15 @@
         font-weight: 600;
         line-height: 70px;
         padding-left: 60px;
+<<<<<<< HEAD
 
+=======
+    }
+
+    nav .logo a {
+        text-decoration: none;
+        color: white;
+>>>>>>> tmp
     }
 
     nav ul {
@@ -116,15 +124,10 @@ nav ul li a:hover:after{
         width: 100px;
     }
 
-    .show,
+    .showing,
     .icon,
     input {
         display: none;
-    }
-
-    .logo a {
-        text-decoration: none;
-        color: #000;
     }
 
     @media all and (max-width:968px) {
@@ -162,7 +165,7 @@ nav ul li a:hover:after{
             border-bottom: 0px;
         }
 
-        .show {
+        .showing {
             display: block;
             color: white;
             font-size: 18px;
@@ -171,7 +174,7 @@ nav ul li a:hover:after{
             cursor: pointer;
         }
 
-        .show:hover {
+        .showing:hover {
             color: cyan;
         }
 
@@ -189,7 +192,7 @@ nav ul li a:hover:after{
             box-shadow: none;
         }
 
-        .show+a,
+        .showing+a,
         ul {
             display: none;
         }
@@ -199,62 +202,59 @@ nav ul li a:hover:after{
         }
     }
 </style>
-</head>
 
-<body>
-    <div class="container">
-        <nav>
-            <div class="logo"><a href="{{ url('/') }}">Community Center</a></div>
-            <label for="btn" class="icon">
-                <span class="fa-solid fa-bars"></span>
-            </label>
-            <input type="checkbox" id="btn">
-            <ul>
-                <li><a href="{{ url('aboutus') }}">About us</a></li>
-                <li>
-                    <label for="btn-1" class="show">New +</label>
-                    <a href="">New</a>
-                    <input type="checkbox" id="btn-1">
-                    <ul class="col-1">
-                        <li><a href="">New Services</a></li>
-                        <li><a href="">New Activities</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <label for="btn-2" class="show">Youth Support +</label>
-                    <a href="">Youth Support</a>
-                    <input type="checkbox" id="btn-2">
-                    <ul class="col-2">
-                        <li><a href="{{ url('youth1') }}">Mental Support</a></li>
-                        <li><a href="">Student Development Service</a></li>
-                        <li><a href="">Welling for Youths</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <label for="btn-3" class="show">Elderly Support +</label>
-                    <a href="">Elderly Support</a>
-                    <input type="checkbox" id="btn-3">
-                    <ul class="col-3">
-                        <li><a href="">New Services</a></li>
-                        <li><a href="">New Activities</a></li>
-                    </ul>
-                </li>
-                <li><a href="">Contact Us</a></li>
-                <li>
-                    <label for="btn-4" class="show">Language</label>
-                    <a href=""><i class="fa-solid fa-earth-americas"></i></a>
-                    <input type="checkbox" id="btn-4">
-                    <ul class="col-4">
-                        <li><a href="">English</a></li>
-                        <li><a href="">Chinese</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href=""><i class="fa-solid fa-arrow-right-to-bracket"></i></a>
-                </li>
-            </ul>
-        </nav>
 
-    </div>
-    <!-- </body>
-</html> -->
+<div class="container">
+    <nav>
+        <div class="logo"><a href="{{ url('home') }}"> Community Center </a></div>
+        <label for="btn" class="icon">
+            <span class="fa-solid fa-bars"></span>
+        </label>
+        <input type="checkbox" id="btn">
+        <ul>
+            <li><a href="{{ url('aboutus') }}">About us</a></li>
+            <li>
+                <label for="btn-1" class="showing">New +</label>
+                <a href="">New</a>
+                <input type="checkbox" id="btn-1">
+                <ul class="col-1">
+                    <li><a href="{{ url('services') }}">New Services</a></li>
+                    <li><a href="{{ url('activities') }}">New Activities</a></li>
+                </ul>
+            </li>
+            <li>
+                <label for="btn-2" class="showing">Youth Support +</label>
+                <a href="">Youth Support</a>
+                <input type="checkbox" id="btn-2">
+                <ul class="col-2">
+                    <li><a href="{{ url('youth1') }}">Mental Support</a></li>
+                    <li><a href="{{ url('youth2') }}">Student Development Service</a></li>
+                    <li><a href="{{ url('youth3') }}">Welling for Youths</a></li>
+                </ul>
+            </li>
+            <li>
+                <label for="btn-3" class="showing">Elderly Support +</label>
+                <a href="">Elderly Support</a>
+                <input type="checkbox" id="btn-3">
+                <ul class="col-3">
+                    <li><a href="">New Services</a></li>
+                    <li><a href="">New Activities</a></li>
+                </ul>
+            </li>
+            <li><a href="{{ url('contactus') }}">Contact Us</a></li>
+            <li>
+                <label for="btn-4" class="showing">Language</label>
+                <a href=""><i class="fa-solid fa-earth-americas"></i></a>
+                <input type="checkbox" id="btn-4">
+                <ul class="col-4">
+                    <li><a href="">English</a></li>
+                    <li><a href="">Chinese</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="{{ url('login') }}"><i class="fa-solid fa-arrow-right-to-bracket"></i></a>
+            </li>
+        </ul>
+    </nav>
+
+</div>

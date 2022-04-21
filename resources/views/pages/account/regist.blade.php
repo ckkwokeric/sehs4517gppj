@@ -204,8 +204,8 @@
 <!-- <body> -->
 
 <body>
-
     @include('layouts.nav')
+
     <div class="container2">
         <div class="container3">
             <div class="title">Registration</div>
