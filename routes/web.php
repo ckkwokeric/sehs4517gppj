@@ -16,12 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('pages/home-community');
 });
-Route::get('/nav', function () {
-    return view('layouts/nav');
-});
-Route::get('/footer', function () {
-    return view('layouts/footer');
-});
+
+
 Route::get('/home', function () {
     return view('pages/home-community');
 });
@@ -43,6 +39,13 @@ Route::get('/services2', function () {
 Route::get('/services3', function () {
     return view('pages/new/services3');
 });
+
+Route::get('youth1.2', function () {
+    return view('pages/youths/youth1-2');
+});
+Route::get('youth1.3', function () {
+    return view('pages/youths/youth1-3');
+});
 Route::get('/youth1', function () {
     return view('pages/youths/youth1');
 });
@@ -58,13 +61,17 @@ Route::get('/questionnaire', function () {
 Route::get('/score', function () {
     return view('pages/questionnaire/score');
 });
-
-Route::get('/account', function () {
-    return view('pages/account/login');
+Route::get('/contactus', function () {
+    return view('pages/contactus');
 });
+
+// backend notice
 Route::get('/login', function () {
     return view('pages/account/login2');
 });
 Route::get('/registration', function () {
     return view('pages/account/regist');
+});
+Route::get('/record', function () {
+    return view('pages/account/record');
 });

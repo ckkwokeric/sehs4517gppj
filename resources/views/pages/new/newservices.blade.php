@@ -7,169 +7,236 @@
         <title>Laravel</title>
 
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/1ed92467bb.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
        
        
         <style>
-            body{
-                font-family: 'Montserrat', sans-serif;
-            }
-             .poster{
-                width:100%;
-                height:90vh;
-             }     
-             .container3{
-                 position:relative;
-             }
-             .slogo{
-                 position: absolute;
-                 font-size: 30px;
-                line-height: 40px;
-                color: #D2B48C;
-                top:550px;
-                left:30%;
-                font-family: 'Comfortaa', cursive;
-             }
-             .container4{
-                 
-                 margin-left:100px;
-                 margin-right:100px;
-                 justify-content:cener;
-             }
-             .container5{
-                 display:flex;
-                 margin-bottom:180px;
-             }
-             .address{
-                margin:30px 0;
-                display:flex;
-            }
-            .address img{
-                padding-top:12px;
-                padding-right:20px;
-            }
-            .address .arrow{
-                width:15px;
-                height:15px;
-                padding-top:16px;
-                padding-right:20px;
-            }
-            .address p{   
-                /* identical to box height */
-                color: #D2B48C;
-            }
-            .container6{
-                margin:30px;
-            }
-            .container6 p{
-                font-size: 16px;
-                line-height: 30px;
-                /* or 188% */
-                letter-spacing: 0.05em;
-                color: #000000;
-                width:600px;
-                padding-right:60px;
-            }
-            .container6 p.climb{
-                width:500px;
-            }
-            .container6 .name{
-                font-size: 24px;
-                line-height: 29px;
-                /* identical to box height */
-               font-weight:400;
-                font-family: 'Montserrat', sans-serif;
-            }
-            .container6 .name.elderly{
-                color: #FF4500;
-            }
-            .container6 .name.teens{
-                color: #FFD700;
-            }
-            .container6 .name.climb{
-                color: #008000;
-            }
-            .container5 .img{
-                margin-right:50px;
-            }
-            .btn{
-                background:red;
-                display:inline-block;
-                padding:5px 38px;
-                border-radius: 10px;
-                margin-top:20px;
-                text-transform:uppercase;
-            }
-            .btn.elderly{
-                background: #FF4500;
-            }
-            .btn.teens{
-                background: #FFD700;
-            }
-            .btn.climb{
-                background: #008000;
-            }
-            .btn a{
-                font-weight: 600;
-                font-size: 18px;
-                line-height: 29px;
-                /* identical to box height */
-                text-decoration:none;
-                color: #FFFFFF; 
-            }
+          *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+.container2{
+    position: relative;
+    text-align: center;
+}
+.container2 img{
+    width: 100%;
+}
+.container2 p{
+    position: absolute;
+    text-align: center;
+    bottom: 15%;
+    left: 25%;
+    right: 25%;
+    transition: all 0.3s ease;
+    font-size: 36px;
+    line-height: 40px;
+    color: #D2B48C;
+    font-weight: 700;
+}
+.container2:hover > p{
+    visibility: visible;
+    transition: all 0.3s ease;
+    transform: translateY(-20px);
+}
+.container3{
+    margin: 5%;
+}
+.container3 i{
+    padding-right: 10px;
+    color: black;
+}
+.container3 i a{
+    text-decoration: none;
+}
+.container3 i:hover{
+    color: #008DD0;
+}
+.container3 span{
+    color: #2565AE;
+    font-size: 16px;
+    font-weight: 600;
+}
+.container4, .container6{
+    margin: 5% 5% 10%;
+    display: flex;
+}
+.container5.two{
+    display: none;
+}
+.text{
+    margin-right: 10px;
+}
+.text.two .title{
+    display: none;
+}
+.text .title{
+    font-size: 24px;
+    line-height: 29px;
+    color: #FF4500;
+    font-weight: 700;
+    margin-bottom: 5%;
+}
+.container6 .text .title{
+    color: #FFD700;
+}
+.container4.green .title{
+    color: #008000;
+}
+.text p{
+    font-size: 16px;
+    line-height: 30px;
+    margin-bottom: 5%;
+}
+.btn-more{
+    border-radius: 10px;
+    color: white;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 11px 47px;
+    font-weight: 700;
+}
+.btn-more.red{
+    background: #FF4500;
+}
+.btn-more.yellow{
+    background: #FFD700;
+}
+.btn-more.green{
+    background: #008000;;
+}
+.btn-more:hover{
+    transition: all 0.3s ease;
+    transform: translateY(-5px);
+}
+.btn-more a{
+    text-decoration: none;
+    color: white;
+}
+.container6 .text.one {
+    margin-left: 30px;
+    margin-top: 5%;
+}
+@media all and (max-width:1045px){
+    .container2 p{
+        font-size: 26px;
+    }
+    .container4, .container6{
+        flex-wrap: wrap;
+    }
+    .container5{
+        width: 100%;
+    }
+    .container5.one{
+        display: none;
+    }
+    .container5.two{
+        display: block;
+        text-align: center;
+    }
+    .text{
+        width: 100%;
+    }
+    .text.two .title{
+        display: block;
+        text-align: start;
+        width: 100%;
+    }
+    .text.one .title{
+        display: none;
+    }
+    .text p{
+        text-align: justify;
+    }
+    .container5 img{
+        width: 100%;
+    }
+    .container6 .text.one{
+        margin-left: 0;
+    }
+}
+@media all and (max-width:600px){
+    .container2 p{
+        font-size: 15px;
+    }
+}
                                  
         </style>
         
 @include('layouts.nav')
 <!-- <body> -->
+
+<!-- content -->
 <div class="container2">
-    <div class="container3"></div>
-        <img class="poster" src="img/C-services/poster.png" alt="">
-        <p class="slogo">From the heart, created by love</p>
+        <img src="img/C-services/poster2 (2).png" alt="">
+        <p>From the heart, created by love</p>
     </div>
+
+    <div class="container3">
+        <a href="{{ url('home') }}"> <i class="fa-solid fa-house"></i></a> 
+        <i class="fa-solid fa-chevron-right"></i>
+        <span class="title">Activities</span>
+    </div>
+
     <div class="container4">
-        <div class="address">
-           <span><img src="img/home.png" alt=""></span>
-           <span><img class="arrow"src="img/arrow.png" alt=""></span>
-           <p>About Us</p>
+        <div class="text two">
+            <div class="title">Wisdom and Love Carer Support Project</div>
         </div>
-        <div class="container5">
-            <div class="container6">
-                <p class="name elderly">Wisdom and Love Carer Support Project</p>
-                <p>In the late 19th Century, abduction and trafficking of women and children were serious crimes in Hong Kong. On 8th November, 1878, a group of local Chinese presented a petition to the Governor, Sir John Pope Hennessy, K.C.M.G., to set up Po Leung Kuk to rescue the kidnapped victims. The “Society for the Protection of Women and Children” was approved by the Hong Kong Governor in May, 1880, but as the petition was submitted on 8th November, 1878, that date was adopted as our founding date.</p>
-                <div class="btn elderly">
-                    <a href="">more</a>
-                </div>
-            </div>
+        <div class="container5 two">
             <img src="img/C-services/elderly.png" alt="">
         </div>
-        
-        <div class="container5">
-        <img class="img" src="img/C-services/teens.png" alt="">
-            <div class="container6">
-                <p class="name teens">TEENS PSYCHOLOGICAL CONUNSELLING</p>
-                <p>Children are nurtured, Youngsters are educated, Adults are supported to contribute, Elderly are cared for, The less fortunate are lightened with hope.
-</p>
-                <div class="btn teens">
-                    <a href="">more</a>
-                </div>
-            </div>
-            
+        <div class="text one">
+            <div class="title">Wisdom and Love Carer Support Project</div>
+            <p>In the late 19th Century, abduction and trafficking of women and children were serious crimes in Hong Kong. On 8th November, 1878, a group of local Chinese presented a petition to the Governor, Sir John Pope Hennessy, K.C.M.G., to set up Po Leung Kuk to rescue the kidnapped victims. The “Society for the Protection of Women and Children” was approved by the Hong Kong Governor in May, 1880, but as the petition was submitted on 8th November, 1878, that date was adopted as our founding date.</p>
+            <div class="btn-more red">
+                <a href="{{ url('services1') }}">more</a>
+             </div>
+        </div>
+        <div class="container5 one">
+            <img src="img/C-services/elderly.png" alt="">
+        </div>
+    </div>
+
+    <div class="container6">
+        <div class="text two">
+        <div class="title">TEENS PSYCHOLOGICAL CONUNSELLING</div>
         </div>
         <div class="container5">
-            <div class="container6">
-                <p class="name climb">STUDENT DEVELOPMENT SERVICES</p>
-                <p class="climb">To be the most prominent and committed charitable organisation. In the Kuk's Spirit to do good deeds with benevolence. Dedicated in protecting the young and the innocent, caring for the elderly and the underprivileged, aiding the poor and healing the sick, educating the young and nurturing their morality, providing recreaction to the public, caring for the environment, passing on the cultural inheritance and bringing goodness to the community.</p>
-                <div class="btn climb">
-                    <a href="">more</a>
-                </div>
-            </div>
+             <img src="img/C-services/teens.png" alt="">
+        </div>
+        <div class="text one">
+            <div class="title">TEENS PSYCHOLOGICAL CONUNSELLING</div>
+            <p>Children are nurtured, Youngsters are educated, Adults are supported to contribute, Elderly are cared for, The less fortunate are lightened with hope.
+            </p>
+            <div class="btn-more yellow">
+                <a href="{{ url('services2') }}">more</a>
+             </div>
+        </div>
+    </div>
+
+    <div class="container4 green">
+        <div class="text two">
+            <div class="title">STUDENT DEVELOPMENT SERVICES</div>
+        </div>
+        <div class="container5 two">
+            <img src="img/C-services/climbing.png" alt="">
+        </div>
+        <div class="text one">
+            <div class="title">STUDENT DEVELOPMENT SERVICES</div>
+            <p>To be the most prominent and committed charitable organisation. In the Kuk's Spirit to do good deeds with benevolence. Dedicated in protecting the young and the innocent, caring for the elderly and the underprivileged, aiding the poor and healing the sick, educating the young and nurturing their morality, providing recreaction to the public, caring for the environment, passing on the cultural inheritance and bringing goodness to the community.</p>
+            <div class="btn-more green">
+                <a href="{{ url('services3') }}">more</a>
+             </div>
+        </div>
+        <div class="container5 one">
             <img src="img/C-services/climbing.png" alt="">
         </div>
     </div>
-</div>
-
 @include('layouts.footer')
 
 </body>

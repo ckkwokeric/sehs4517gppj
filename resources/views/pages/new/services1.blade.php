@@ -8,95 +8,90 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-       
+        <script src="https://kit.fontawesome.com/1ed92467bb.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        
        
         <style>
-            .container2{
-                font-family: 'Montserrat', sans-serif;
-                margin-left:100px;
-                        margin-right:100px;
-                        justify-content: center;
-               
-                      
-            }
-            .container2 .poster{
-                width:100%;
-                margin-top:50px;
-                margin-bottom:70px;
-            }
-            .address{
-                display:flex;
-                font-weight: 400;
-                
-            }
-            .address .address-box{
-                display:flex;
-                padding-right:18px;
-            }
-            .address-box img{
-                padding-top:50%;
-            }
-            .address-box .type{
-                color:#D2B48C;
-            }
-            .arrow{
-                width:15px;
-                height:15px;
-                padding-top:50%;
-                padding-left:18px;
-            }
-            .content p{
-                padding-bottom:30px;
-                font-weight: 400;
-                font-size: 20px;
-                line-height: 24px;
-            }
-            .picture{
-                width:100%;
-              
-            }
-                  
-                                 
+           *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+.container2{
+    margin: 5%;
+}
+.container2 img{
+    width: 100%;
+}
+.container3{
+    margin: 5%;
+    line-height: 30px;
+}
+.container3 i{
+    padding-right: 10px;
+    color: black;
+}
+.container3  a{
+    text-decoration: none;
+}
+.container3 span a{
+    color: black;
+}
+.container3 i:hover, .container3 span a:hover{
+    color: #008DD0;
+}
+.container3 span{
+    color: #2565AE;
+    font-size: 16px;
+    font-weight: 600;
+}
+.container4{
+    margin: 5% 5% 0;
+}
+.container4 p{
+    margin-bottom:5% ;
+    line-height: 30px;
+}
+.container4 p:last-child{
+    margin-bottom: 0;
+}
+.container5 img{
+    width: 100%;
+    margin-top: -30px;
+}
         </style>
         
 @include('layouts.nav')
 <!-- <body> -->
-    <div class="container2">
-        <img class="poster" src="img/new-program.png" alt="">
-        <div class="address">
-            <div class="address-box">
-                <span><img src="img/home.png" alt=""></span>
-                <span><img class="arrow" src="img/arrow.png" alt=""></span>
-            </div>
-            <div class="address-box">
-                <p class="type">New Services</p>
-                <span><img class="arrow" src="img/arrow.png" alt=""></span>
-            </div>
-            <div class="address-box">
-                <p>Wisdom and Love Carer Support Project</p>
-                <span><img class="arrow" src="img/arrow.png" alt=""></span>
-            </div>
-        </div>
-        
-        <div class="content">
-            <p>Christian Wisdom Service has always been concerned about the physical, psychological, 
-                social and spiritual needs of the carers. Therefore, the "Wisdom and Love Carer Support Project" was established 
-                with the concept of "carer-oriented" service to walk with the carers of the mentally disabled.
-            </p>
-            <p>Christian Wisdom Service has always been concerned about the physical, psychological, social and spiritual needs 
-                of the carers. Therefore, the "Wisdom and Love Carer Support Project" was established with the concept of "carer-oriented"
-                 service to walk with the carers of the mentally disabled.
-            </p>
-            <p>In addition, in order to value the carers' participation in the center and to enhance their sense of recognition 
-                and belonging to the service, we have established a membership system and a "Wisdom and Love Committee", with the 
-                carers acting as office-bearers, with the direction of joint planning and sharing of tasks.
-            </p>
-            <p>If you are interested in participating or collaborating in the following events or service briefings, 
-                please click here to leave your contact information so that our staff can contact you.
-            </p>
-        </div>
+   <!-- content -->
+   <div class="container2">
+        <img src="img/new-program.png" alt="">
     </div>
-    <img  class="picture" src="img/Component 57.png" alt="">
+
+    <div class="container3">
+        <a href="{{ url('home') }}"> <i class="fa-solid fa-house"></i></a> 
+        <i class="fa-solid fa-chevron-right"></i>
+        <span class="title"><a href="{{ url('services') }}">New Services</a> </span>
+        <i class="fa-solid fa-chevron-right"></i>
+        <span class="title">Wisdom and Love Carer Support Project</span>
+    </div>
+
+    <div class="container4">
+        <p>Christian Wisdom Service has always been concerned about the physical, psychological, social and spiritual needs of the carers. Therefore, the "Wisdom and Love Carer Support Project" was established with the concept of "carer-oriented" service to walk with the carers of the mentally disabled.
+        </p>
+        <p>Christian Wisdom Service has always been concerned about the physical, psychological, social and spiritual needs of the carers. Therefore, the "Wisdom and Love Carer Support Project" was established with the concept of "carer-oriented" service to walk with the carers of the mentally disabled.
+        </p>
+        <p>In addition, in order to value the carers' participation in the center and to enhance their sense of recognition and belonging to the service, we have established a membership system and a "Wisdom and Love Committee", with the carers acting as office-bearers, with the direction of joint planning and sharing of tasks.
+        </p>
+        <p>If you are interested in participating or collaborating in the following events or service briefings, please click here to leave your contact information so that our staff can contact you.</p>
+    </div>
+
+    <div class="container5">
+        <img src="img/Component 57.png" alt="">
+    </div>
 
 
 @include('layouts.footer')
