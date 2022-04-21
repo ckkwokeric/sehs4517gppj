@@ -231,9 +231,9 @@
 
     <section>
         <div class="container2">
-            <img src="img/youths2/heart.png" alt="" class="heart">
+            <img src="{{ asset('img/youths2/heart.png') }}" class="heart">
             <div class="info">
-                <img src="img/youths2/image 66.png" alt="" class="poster">
+                <img src="{{ asset('img/youths2/image 66.png') }}" class="poster">
                 <p class="detail">Service learning", as the name implies, is the achievement of "learning" through
                     "service". The International College has been actively promoting "service learning" by incorporating
                     relevant elements in various disciplines (e.g. "Business Ethics and Social Responsibility") and
@@ -252,12 +252,12 @@
     <div class="container4">
         <div class="wrapper">
             <div class="gallery">
-                <div class="image"><span><img src="img/youths2/img1 (1).png" alt=""></span></div>
-                <div class="image"><span><img src="img/youths2/img2 (1).png" alt=""></span></div>
-                <div class="image"><span><img src="img/youths2/img3 (1).png" alt=""></span></div>
-                <div class="image"><span><img src="img/youths2/img4 (1).png" alt=""></span></div>
-                <div class="image"><span><img src="img/youths2/img1 (1).png" alt=""></span></div>
-                <div class="image"><span><img src="img/youths2/img6 (1).png" alt=""></span></div>
+                <div class="image"><span><img src="{{ asset('img/youths2/img1 (1).png') }}"></span></div>
+                <div class="image"><span><img src="{{ asset('img/youths2/img2 (1).png') }}"></span></div>
+                <div class="image"><span><img src="{{ asset('img/youths2/img3 (1).png') }}"></span></div>
+                <div class="image"><span><img src="{{ asset('img/youths2/img4 (1).png') }}"></span></div>
+                <div class="image"><span><img src="{{ asset('img/youths2/img1 (1).png') }}"></span></div>
+                <div class="image"><span><img src="{{ asset('img/youths2/img6 (1).png') }}"></span></div>
             </div>
         </div>
 
@@ -276,7 +276,6 @@
                 <div class="slide next">
                     <i class="fa-solid fa-angle-right"></i>
                 </div>
-                <img src="" alt="">
             </div>
         </div>
     </div>

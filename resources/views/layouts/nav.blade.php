@@ -17,6 +17,7 @@
 
     nav {
         background: #008DD0;
+
     }
 
     nav:after {
@@ -32,15 +33,11 @@
         font-weight: 600;
         line-height: 70px;
         padding-left: 60px;
-<<<<<<< HEAD
-
-=======
     }
 
     nav .logo a {
         text-decoration: none;
         color: white;
->>>>>>> tmp
     }
 
     nav ul {
@@ -206,20 +203,20 @@ nav ul li a:hover:after{
 
 <div class="container">
     <nav>
-        <div class="logo"><a href="{{ url('home') }}"> Community Center </a></div>
+        <div class="logo"><a href="{{ route('home') }}"> Community Center </a></div>
         <label for="btn" class="icon">
             <span class="fa-solid fa-bars"></span>
         </label>
         <input type="checkbox" id="btn">
         <ul>
-            <li><a href="{{ url('aboutus') }}">About us</a></li>
+            <li><a href="{{ route('about') }}">About us</a></li>
             <li>
                 <label for="btn-1" class="showing">New +</label>
                 <a href="">New</a>
                 <input type="checkbox" id="btn-1">
                 <ul class="col-1">
-                    <li><a href="{{ url('services') }}">New Services</a></li>
-                    <li><a href="{{ url('activities') }}">New Activities</a></li>
+                    <li><a href="{{ route('newServices') }}">New Services</a></li>
+                    <li><a href="{{ route('newActivities') }}">New Activities</a></li>
                 </ul>
             </li>
             <li>
@@ -227,9 +224,9 @@ nav ul li a:hover:after{
                 <a href="">Youth Support</a>
                 <input type="checkbox" id="btn-2">
                 <ul class="col-2">
-                    <li><a href="{{ url('youth1') }}">Mental Support</a></li>
-                    <li><a href="{{ url('youth2') }}">Student Development Service</a></li>
-                    <li><a href="{{ url('youth3') }}">Welling for Youths</a></li>
+                    <li><a href="{{ route('youth1') }}">Mental Support</a></li>
+                    <li><a href="{{ route('youth2') }}">Student Development Service</a></li>
+                    <li><a href="{{ route('youth3') }}">Welling for Youths</a></li>
                 </ul>
             </li>
             <li>
@@ -241,7 +238,7 @@ nav ul li a:hover:after{
                     <li><a href="">New Activities</a></li>
                 </ul>
             </li>
-            <li><a href="{{ url('contactus') }}">Contact Us</a></li>
+            <li><a href="{{ route('contact') }}">Contact Us</a></li>
             <li>
                 <label for="btn-4" class="showing">Language</label>
                 <a href=""><i class="fa-solid fa-earth-americas"></i></a>

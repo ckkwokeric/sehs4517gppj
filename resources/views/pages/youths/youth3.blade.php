@@ -416,13 +416,13 @@
     </section>
 
     <div class="container3">
-        <a href="{{ url('home') }}"> <i class="fa-solid fa-house"></i></a>
+        <a href="{{ route('home') }}"> <i class="fa-solid fa-house"></i></a>
         <i class="fa-solid fa-chevron-right"></i>
         <span class="title">Activities</span>
     </div>
 
     <div class="container4">
-        <img src="img/image 14 (2).png" alt="">
+        <img src="{{ asset('img/image 14 (2).png') }}">
     </div>
 
     <div class="container5">
@@ -477,7 +477,7 @@
     </div>
 
     <div class="container8">
-        <img src="img/image 18.png" alt="">
+        <img src="{{ asset('img/image 18.png') }}" alt="">
     </div>
 
     <div class="container9">
@@ -486,7 +486,7 @@
                 Campsite
             </div>
             <div class="images">
-                <img src="img/activity/Campsites.png" alt="">
+                <img src="{{ asset('img/activity/Campsites.png') }}" alt="">
             </div>
             <div class="info">
                 <p>Notable changes to the race weekend schedule is the ASICS half marathon moved to Saturday and the
@@ -502,7 +502,7 @@
                 Adventure
             </div>
             <div class="images">
-                <img src="img/activity/Adventure.png" alt="">
+                <img src="{{ asset('img/activity/Adventure.png') }}" alt="">
             </div>
             <div class="info">
                 <p>Notable changes to the race weekend schedule is the ASICS half marathon moved to Saturday and the
@@ -518,7 +518,7 @@
                 Night Hiking
             </div>
             <div class="images">
-                <img src="img/activity/night-hiking.png" alt="">
+                <img src="{{ asset('img/activity/night-hiking.png') }}" alt="">
             </div>
             <div class="info">
                 <p>Notable changes to the race weekend schedule is the ASICS half marathon moved to Saturday and the

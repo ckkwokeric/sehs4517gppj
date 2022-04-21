@@ -208,11 +208,11 @@
 
     <!-- content -->
     <div class="container2">
-        <img src="img/about/poster.png" alt="">
+        <img src="{{ asset('img/about/poster.png') }}">
     </div>
 
     <div class="container3">
-        <a href="{{ url('home') }}"> <i class="fa-solid fa-house"></i></a>
+        <a href="{{ route('home') }}"> <i class="fa-solid fa-house"></i></a>
         <i class="fa-solid fa-chevron-right"></i>
         <span class="title">About Us</span>
     </div>
@@ -239,7 +239,7 @@
                 stakeholder - the community.</p>
         </div>
         <div class="container6 two">
-            <img src="img/about/building.png" alt="">
+            <img src="{{ asset('img/about/building.png') }}">
         </div>
         <div class="container5 one">
             <div class="title">The Founding of Po Leung Kuk</div>
@@ -263,7 +263,7 @@
         </div>
 
         <div class="container6 one">
-            <img src="img/about/building.png" alt="">
+            <img src="{{ asset('img/about/building.png') }}">
         </div>
     </div>
 
@@ -274,15 +274,15 @@
             average with about 45,000 students of its affiliated schools.</p>
         <div class="container8">
             <div class="container9 one">
-                <img src="img/about/elderly.png" alt="">
+                <img src="{{ asset('img/about/elderly.png') }}">
                 <span>Elderly</span>
             </div>
             <div class="container9 two">
-                <img src="img/about/teens.png" alt="">
+                <img src="{{ asset('img/about/teens.png') }}">
                 <span>Teens</span>
             </div>
             <div class="container9 three">
-                <img src="img/about/kids.png" alt="">
+                <img src="{{ asset('img/about/kids.png') }}">
                 <span>Kids</span>
             </div>
         </div>

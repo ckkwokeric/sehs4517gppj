@@ -161,7 +161,7 @@
     <div class="container2">
         <p class="type">New Service</p>
         <div class="container3">
-            <img src="img/new-program.png" alt="">
+            <img src="{{ asset('img/new-program.png') }}">
         </div>
         <p class="title">
             智親至愛照顧者支援計劃
@@ -174,14 +174,14 @@
             submitted on 8th November, 1878, that date was adopted as our founding date.
         </p>
         <div class="btn-more">
-            <a href="{{ url('services1') }}">More</a>
+            <a href="{{ route('subService1') }}">More</a>
         </div>
 
     </div>
     <div class="container2 two">
         <p class="type">New Activities</p>
         <div class="container3">
-            <img src="img/new-activities.png" alt="">
+            <img src="{{ asset('img/new-activities.png') }}">
         </div>
         <p class="title">
             March - April Science Camp
@@ -202,7 +202,7 @@
     <div class="container4">
         <p class="type">Quick Donate</p>
         <div class="container5">
-            <img src="img/Donate.png" alt="">
+            <img src="{{ asset('img/Donate.png') }}">
             <div class="container6">
                 <p class="info">Let's support us, your generous donation can help to provide timely assistance to the
                     affected grassroots people. Every HK$350 you donate will enable a person with low-income, jobless or
@@ -220,7 +220,7 @@
             <div class="new">
                 <p class="type">New Activities</p>
                 <div class="poster2">
-                    <img src="img/new-activities.png" alt="">
+                    <img src="{{ asset('img/new-activities.png') }}">
 
     @include('layouts.footer')
 

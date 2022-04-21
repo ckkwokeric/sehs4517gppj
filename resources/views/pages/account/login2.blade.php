@@ -171,14 +171,11 @@
             opacity: 0.7;
         }
 
-<<<<<<< HEAD
-=======
         button.submit a {
             text-decoration: none;
             color: white;
         }
 
->>>>>>> tmp
         /* responsive */
         @media(max-width:780px) {
             .body {
@@ -202,7 +199,7 @@
     <div class="container2">
         <div class="body">
             <section class="side">
-                <img src="img/login/form.svg" alt="">
+                <img src="{{ asset('img/login/form.svg') }}" alt="">
             </section>
 
             <section class="main">
@@ -223,15 +220,9 @@
                             <input type="password" placeholder="password" class="field error">
                             <i class="fa-solid fa-lock"></i>
                         </div>
-<<<<<<< HEAD
-                        <p class="remind"><a href="">Don't have account?</a></p>
-
-                        <button class="submit">Login</button>
-=======
                         <p class="remind"><a href="{{ url('registration') }}">Don't have account?</a></p>
 
                         <button class="submit"><a href="{{ url('record') }}">Login</a> </button>
->>>>>>> tmp
                     </form>
                 </div>
             </section>

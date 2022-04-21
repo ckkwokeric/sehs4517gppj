@@ -224,7 +224,7 @@
     <section class="content">
         <div class="container3 youth1">
             <div class="card-lapping">
-                <img src="img/youth1/youth2-1.png" alt="" class="img1">
+                <img src="{{ asset('img/youth1/youth2-1.png') }}" class="img1">
             </div>
             <div class="info youth1">
                 <h2 class="title">Element of Emotion</h2>
@@ -232,14 +232,14 @@
                     consciousness does. When we encounter unfair treatment, A feels frustrated, while B shows
                     incomparable anger, why the two emotions...</p>
                 <div class="btn-readmore">
-                    <a href="{{ url('youth1.2') }}">Read more</a>
+                    <a href="{{ route('youth1_sub1') }}">Read more</a>
                     <i class="fa-solid fa-arrow-right"></i>
                 </div>
             </div>
         </div>
         <div class="container3 youth2">
             <div class="card-lapping">
-                <img src="img/youth1/youth2-2.png" alt="" class="img1">
+                <img src="{{ asset('img/youth1/youth2-2.png') }}" class="img1">
             </div>
             <div class="info youth2">
                 <h2 class="title">How do I listen to people? How do I speak to people?</h2>
@@ -247,7 +247,7 @@
                     mouth or their own inner voice, different emotions will turn into a set of notes, which will
                     amplify, refine, and even adapt the original meaning of the words,...</p>
                 <div class="btn-readmore">
-                    <a href="{{ url('youth1.3') }}">Read more</a>
+                    <a href="{{ route('youth1_sub2') }}">Read more</a>
                     <i class="fa-solid fa-arrow-right"></i>
                 </div>
             </div>

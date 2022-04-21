@@ -184,13 +184,13 @@
 
     <!-- content -->
     <div class="container2">
-        <img src="img/C-services/poster3.png" alt="">
+        <img src="{{ asset('img/C-services/poster3.png') }}" alt="">
     </div>
 
     <div class="container3">
-        <a href=""> <i class="fa-solid fa-house"></i></a>
+        <a href="{{ route('home') }}"> <i class="fa-solid fa-house"></i></a>
         <i class="fa-solid fa-chevron-right"></i>
-        <span class="title"><a href="">New Services</a> </span>
+        <span class="title"><a href="{{ route('newServices') }}">New Services</a> </span>
         <i class="fa-solid fa-chevron-right"></i>
         <span class="title">Student Development Services</span>
     </div>
@@ -235,12 +235,12 @@
     <div class="container10">
         <div class="title">Relatived Images</div>
         <div class="container9">
-            <img src="img/img1 (1).png" alt="">
-            <img src="img/img2 (1).png" alt="">
-            <img src="img/img3 (1).png" alt="">
-            <img src="img/img4 (1).png" alt="">
-            <img src="img/img1 (1).png" alt="">
-            <img src="img/img6 (1).png" alt="">
+            <img src="{{ asset('img/img1 (1).png') }}">
+            <img src="{{ asset('img/img2 (1).png') }}">
+            <img src="{{ asset('img/img3 (1).png') }}">
+            <img src="{{ asset('img/img4 (1).png') }}">
+            <img src="{{ asset('img/img1 (1).png') }}">
+            <img src="{{ asset('img/img6 (1).png') }}">
         </div>
     </div>
 

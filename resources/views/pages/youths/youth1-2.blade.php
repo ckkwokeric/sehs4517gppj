@@ -110,16 +110,16 @@
 
     <!-- content -->
     <div class="container3">
-        <a href="{{ url('home') }}"> <i class="fa-solid fa-house"></i></a>
+        <a href="{{ route('home') }}"> <i class="fa-solid fa-house"></i></a>
         <i class="fa-solid fa-chevron-right"></i>
-        <span class="title"><a href="{{ url('youth1') }}">Mental Support</a> </span>
+        <span class="title"><a href="{{ route('youth1') }}">Mental Support</a> </span>
         <i class="fa-solid fa-chevron-right"></i>
         <span class="title">Teens Psychological Counselling</span>
     </div>
 
     <div class="container2">
         <div class="title">Element of Emotion</div>
-        <img src="img/youth1/image 55.png" alt="">
+        <img src="{{ asset('img/youth1/image 55.png') }}" alt="">
     </div>
 
     <div class="container4">

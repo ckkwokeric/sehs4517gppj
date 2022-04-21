@@ -344,12 +344,12 @@
 
 <!-- content -->
 <div class="container2">
-            <img src="img/new-activities.png" alt="">
-            <img src="img/activity/light-bulk.png" alt="" class="bulk">
+            <img src="{{ asset('img/new-activities.png') }}">
+            <img src="{{ asset('img/activity/light-bulk.png') }}" class="bulk">
     </div>
 
     <div class="container3">
-        <img src="img/activity/flower-icon.png" alt="">
+        <img src="{{ asset('img/activity/flower-icon.png') }}">
         <span>New Timetable</span>
         <table class="content-table">
                 <thead>
@@ -414,7 +414,7 @@
     </div>
 
     <div class="container4">
-        <img src="img/activity/wolf-icon.png" alt="">
+        <img src="{{ asset('img/activity/wolf-icon.png') }}">
         <span>Exciting Adventure</span>
     </div>
 
@@ -424,7 +424,7 @@
                     Campsite
                 </div>
                 <div class="images">
-                    <img src="img/activity/Campsites.png" alt="">
+                    <img src="{{ asset('img/activity/Campsites.png') }}">
                 </div>
                 <div class="info">
                     <p>Notable changes to the race weekend schedule is the ASICS half marathon moved to Saturday and the Village Roadshow Theme Parks Gold Coast Marathon starting earlier at 6am.</p>
@@ -439,7 +439,7 @@
                 Adventure
                     </div>
                     <div class="images">
-                        <img src="img/activity/Adventure.png" alt="">
+                        <img src="{{ asset('img/activity/Adventure.png') }}">
                     </div>
                     <div class="info">
                         <p>Notable changes to the race weekend schedule is the ASICS half marathon moved to Saturday and the Village Roadshow Theme Parks Gold Coast Marathon starting earlier at 6am.</p>
@@ -454,7 +454,7 @@
                 Night Hiking
                     </div>
                     <div class="images">
-                        <img src="img/activity/night-hiking.png" alt="">
+                        <img src="{{ asset('img/activity/night-hiking.png') }}">
                     </div>
                     <div class="info">
                         <p>Notable changes to the race weekend schedule is the ASICS half marathon moved to Saturday and the Village Roadshow Theme Parks Gold Coast Marathon starting earlier at 6am.</p>
