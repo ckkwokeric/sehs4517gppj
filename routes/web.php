@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ActivitiesServicesController;
+use App\Http\Controllers\ElderlyController;
 use App\Http\Controllers\YouthController;
 
 /*
@@ -44,6 +45,14 @@ Route::controller(YouthController::class)->group(function() {
     Route::get('/youth3',  'youth3')->name('youth3'); // Youth - Welling for Youths
 });
 
+
+
+Route::controller(ElderlyController::class)->group(function() {
+    Route::get('/elderlyactivities',  'activities')->name('elderlyactivities'); // Youth - Mental Support
+    Route::get('/elderlydevelopment',  'developmentService')->name('elderlydevelopment'); // Youth - Mental Support
+    Route::get('/elderlysupport',  'support')->name('elderlysupport'); // Youth - Mental Support
+    Route::get('/elderlywelling',  'welling')->name('elderlywelling'); // Youth - Mental Support
+});
 
 
 

@@ -231,11 +231,12 @@ nav ul li a:hover:after{
             </li>
             <li>
                 <label for="btn-3" class="showing">Elderly Support +</label>
-                <a href="">Elderly Support</a>
+                <a href="{{ route('elderlysupport') }}">Elderly Support</a>
                 <input type="checkbox" id="btn-3">
                 <ul class="col-3">
-                    <li><a href="">New Services</a></li>
-                    <li><a href="">New Activities</a></li>
+                    <li><a href="{{ route('elderlyactivities') }}">Activities for Elderly</a></li>
+                    <li><a href="{{ route('elderlydevelopment') }}">Elderly Development Services</a></li>
+                    <li><a href="{{ route('elderlywelling') }}">Welling for Elderly</a></li>
                 </ul>
             </li>
             <li><a href="{{ route('contact') }}">Contact Us</a></li>
