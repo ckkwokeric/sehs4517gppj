@@ -6,235 +6,187 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Laravel</title>
-
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/1ed92467bb.js" crossorigin="anonymous"></script>
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-
+    <script src="https://kit.fontawesome.com/1ed92467bb.js" crossorigin="anonymous"></script>
 
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+
         }
 
         .body {
-            background: #f5f6f7;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: 'Montserrat', sans-serif;
-            height: 100vh;
-            margin: 0 auto;
-        }
-
-        .container2 {
-            background-color: white;
-            border-radius: 10px;
-            width: 768px;
-            max-width: 100%;
-            min-height: 480px;
-            position: relative;
-            overflow: hidden;
-            box-shadow: 0px 14px 28px rgba(0, 0, 0, 0.25),
-                0px 10px 10px rgba(0, 0, 0, 0.22);
-        }
-
-        .form-container {
-            position: absolute;
-            top: 0%;
-            height: 100%;
-            transition: all 0.6 ease-in-out;
-        }
-
-        .sign-up-container {
-            left: 0;
-            width: 50%;
-            z-index: 1;
-            opacity: 0;
-        }
-
-        form {
-            background-color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            padding: 0px 50px;
-            height: 100%;
-            text-align: center;
-        }
-
-        form h1 {
-            font-weight: bold;
-            margin: 0;
-        }
-
-        .social-container {
-            margin: 20px 0;
-        }
-
-        .social-container a {
-            border: 1px solid gray;
-            border-radius: 50%;
-            display: inline-flex;
-            justify-content: center;
-            align-items: center;
-            height: 40px;
-            width: 40px;
-            margin: 0 5px;
-        }
-
-        .social-container a {
-            color: #333;
-            font-size: 14px;
-            text-decoration: none;
-            margin: 15px 0;
-        }
-
-        span {
-            font-size: 12px;
-        }
-
-        input {
-            background-color: #eee;
-            border: none;
-            text-decoration: none;
-            margin: 8px 0;
-            padding: 12px 15px;
+            min-height: 100vh;
             width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            color: #303433;
         }
 
-        .btn-sign,
-        .press {
-            border-radius: 20px;
-            border: 1px solid #1E90Ff;
-            background-color: #1E90Ff;
-            color: white;
-            font-weight: bold;
-            padding: 12px 45px;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            transition: transform 0.8s ease-in;
-        }
-
-        .sign-in-container {
-            left: 0;
-            width: 50%;
-            z-index: 2;
-        }
-
-        .overlay-container {
-            position: absolute;
-            top: 0;
-            left: 50%;
-            width: 50%;
-            height: 100%;
-            overflow: hidden;
-            z-index: 100;
-            transition: transform 0.6s ease-in-out;
-        }
-
-        .overlay {
-
-            background: linear-gradient(90deg, #0162c8, #55e7fc);
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: 0 0;
-            color: white;
-            position: relative;
-            left: -100%;
-            height: 100%;
-            width: 200%;
-            transform: translateX(0);
-            transition: transform 0.6s ease-in-out;
-        }
-
-        .overlay-panel {
-            position: absolute;
+        section {
             display: flex;
-            align-items: center;
             justify-content: center;
-            flex-direction: column;
-            padding: 0px 40px;
-            text-align: center;
-            top: 0;
-            height: 100%;
+            align-items: center;
+        }
+
+        section.side {
+            background: url(img/login/bk.png) no-repeat;
+            background-size: 100% 102%;
+        }
+
+        .side img {
             width: 50%;
-            transform: translateX(0);
-            transition: transform 0.6s ease-in-out;
+            max-width: 50%;
         }
 
-        .overlay-left {
-            transform: translateX(-20%);
+        .login-container {
+            max-width: 450px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
-        .overlay-right {
-            right: 0;
-            transform: translateX(0);
+        .title {
+            text-transform: uppercase;
+            font-size: 3em;
+            font-weight: bold;
+            text-align: center;
+            letter-spacing: 1px;
         }
 
-        button:active {
-            transform: scale(0.95)
+        .seperator {
+            width: 150px;
+            height: 4px;
+            background-color: #843bc7;
+            margin: 24px;
         }
 
-        button.press {
-            background-color: transparent;
-            border-color: white;
+        .welcome-message {
+            text-align: center;
+            font-size: 1.1em;
+            line-height: 28px;
+            margin-bottom: 20px;
+            color: #696969;
         }
 
-        .overlay-panel p {
+        .message {
+            display: none
+        }
+
+        .error-message {
+            display: block;
+            color: red;
+            margin-bottom: 10px;
+        }
+
+        .login-form {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .field {
+            display: block;
+        }
+
+        .form-control {
+            width: 100%;
+            position: relative;
+            margin-bottom: 24px;
+        }
+
+        .form-control:nth-child(2) {
+            margin-bottom: 5px
+        }
+
+        .login-form .remind {
             font-size: 14px;
-            font-weight: 100;
-            line-height: 20px;
+            text-align: right;
+            font-weight: 600;
+        }
+
+        .login-form .remind a {
+            color: #1E90FF;
+        }
+
+        .login-form .remind a:hover {
+            opacity: 0.7;
+        }
+
+        .field,
+        button {
+            border: none;
+            outline: none;
+            background-color: red;
+            border-radius: 30px;
+            font-size: 1.1em;
+        }
+
+        .field {
+            width: 100%;
+            background: #e6e6e6;
+            color: #333;
             letter-spacing: 0.5px;
-            margin: 20px 0 30px;
+            padding: 14px 64px;
         }
 
-        .container2.right-panel-active .sign-in-container {
-            transform: translateX(100%);
+        .field.error {
+            border: 1px solid red;
         }
 
-        .container2.right-panel-active .sign-up-container {
-            transform: translateX(100%);
-            opacity: 1;
-            z-index: 5;
-            animation: slide 0.6s;
+        .field~i {
+            position: absolute;
+            top: 50%;
+            left: 32px;
+            transform: translateY(-50%);
+            color: #888;
+            transition: color 0.4s;
         }
 
-        @keyframes slide {
+        .field:focus~i {
+            color: #843bc7;
+        }
 
-            0%,
-            49.99% {
-                opacity: 0;
-                z-index: 1;
+        button.submit {
+            color: #fff;
+            padding: 14px 64px;
+            margin: 32px auto;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: bold;
+            background-image: linear-gradient(to right, #8b33c5, #15a0e1);
+            cursor: pointer;
+            transition: opacity 0.4s;
+        }
+
+        button.submit:hover {
+            opacity: 0.7;
+        }
+
+        button.submit a {
+            text-decoration: none;
+            color: white;
+        }
+
+        /* responsive */
+        @media(max-width:780px) {
+            .body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
             }
 
-            50%,
-            100% {
-                opacity: 1;
-                z-index: 5;
+            .side {
+                display: none;
             }
-        }
-
-        .container2.right-panel-active .overlay-container {
-            transform: translateX(-100%);
-        }
-
-        .container2.right-panel-active .overlay {
-            transform: translateX(50%);
-        }
-
-        .container2.right-panel-active .overlay-left {
-            transform: translateX(0);
-        }
-
-        .container2.right-panel-active .overlay-right {
-            transform: translateX(20%);
         }
     </style>
 </head>
@@ -243,68 +195,55 @@
 
 <body>
     @include('layouts.nav')
-    <div class="body">
-        <div class="container2" id="container2">
-            <div class="form-container sign-up-container">
-                <form action="">
-                    <h1>Create Account</h1>
-                    <div class="social-container">
-                        <a href=" " class="social"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href=" " class="social"><i class="fa-brands fa-google-plus-g"></i></a>
-                        <a href=" " class="social"><i class="fa-brands fa-linkedin-in"></i></a>
-                    </div>
-                    <span>or use your gmail for registration</span>
-                    <input type="text" placeholder="Username">
-                    <input type="pasword" placeholder="Password">
-                    <input type="pasword" placeholder="Password">
-                    <input type="pasword" placeholder="Password">
-                    <button class="btn-sign">Sign up</button>
-                </form>
-            </div>
-            <div class="form-container sign-in-container">
-                <form action="">
-                    <h1>Sign In</h1>
-                    <div class="social-container">
-                        <a href=" " class="social"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href=" " class="social"><i class="fa-brands fa-google-plus-g"></i></a>
-                        <a href=" " class="social"><i class="fa-brands fa-linkedin-in"></i></a>
-                    </div>
-                    <span>or use your Your account</span>
-                    <input type="text" placeholder="Username">
-                    <input type="pasword" placeholder="Password">
-                    <button class="btn-sign">Sign In</button>
-                </form>
-            </div>
-            <div class="overlay-container">
-                <div class="overlay">
-                    <div class="overlay-panel overlay-left">
-                        <h1>Welcome To FF!</h1>
-                        <p>Please Subscribe and Support to our channel</p>
-                        <button class="press" id="signIn">Sign In</button>
-                    </div>
-                    <div class="overlay-panel overlay-right">
-                        <h1>Frontend Forever</h1>
-                        <p>Learn web designing from here in tamil and english</p>
-                        <button class="press" id="signUp">Sign Up</button>
-                    </div>
+
+    <div class="container2">
+        <div class="body">
+            <section class="side">
+                <img src="{{ asset('img/login/form.svg') }}" alt="">
+            </section>
+
+            <section class="main">
+                <div class="login-container">
+                    <p class="title">Welcome back</p>
+                    <div class="seperator"></div>
+                    <p class="welcome-message">Please,
+                        provide login credential to proceed and have access to all our services
+                    </p>
+
+
+                    <form action="{{ route('loginUser') }}" class="login-form" method="POST">
+                        @csrf
+
+                        @error('loginError')
+                        <p class="message error-message">{{ $message }}</p>
+                        @enderror
+
+                        @error('email')
+                        <p class="message error-message">{{ $message }}</p>
+                        @enderror
+
+                        <div class="form-control">
+                            <input type="text" placeholder="Email" class="field @error('email') error @enderror" name="email">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+
+                        @error('password')
+                        <p class="message error-message">{{ $message }}</p>
+                        @enderror
+                        <div class="form-control">
+                            <input type="password" placeholder="Password" class="field @error('password') error @enderror" name="password">
+                            <i class="fa-solid fa-lock"></i>
+                        </div>
+                        <p class="remind"><a href="{{ route('registration') }}">Don't have account?</a></p>
+
+                        <button class="submit" type="submit">Login</button>
+                    </form>
                 </div>
-            </div>
+            </section>
         </div>
     </div>
 
-    <script>
-        const sigeUpButton = document.getElementById("signUp");
-        const sigeInButton = document.getElementById("signIn");
-        const container = document.getElementById("container2");
-
-        sigeUpButton.addEventListener('click',()=>{
-            container.classList.add("right-panel-active");
-        })
-
-        sigeInButton.addEventListener('click',()=>{
-            container.classList.remove("right-panel-active");
-        })
-    </script>
+    @include('layouts.footer')
 
 </body>
 

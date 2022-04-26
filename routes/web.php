@@ -5,6 +5,8 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ActivitiesServicesController;
 use App\Http\Controllers\ElderlyController;
 use App\Http\Controllers\YouthController;
+use App\Http\Controllers\MemberController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -45,13 +47,20 @@ Route::controller(YouthController::class)->group(function() {
     Route::get('/youth3',  'youth3')->name('youth3'); // Youth - Welling for Youths
 });
 
-
-
+// Elderly route
 Route::controller(ElderlyController::class)->group(function() {
-    Route::get('/elderlyactivities',  'activities')->name('elderlyactivities'); // Youth - Mental Support
-    Route::get('/elderlydevelopment',  'developmentService')->name('elderlydevelopment'); // Youth - Mental Support
-    Route::get('/elderlysupport',  'support')->name('elderlysupport'); // Youth - Mental Support
-    Route::get('/elderlywelling',  'welling')->name('elderlywelling'); // Youth - Mental Support
+    Route::get('/elderlyactivities',  'activities')->name('elderlyactivities'); // Activities for Elderly
+    Route::get('/elderlydevelopment',  'developmentService')->name('elderlydevelopment'); // Elderly Development Service
+    Route::get('/elderlysupport',  'support')->name('elderlysupport'); // Elderly Support
+    Route::get('/elderlywelling',  'welling')->name('elderlywelling'); // Welling for Elderly
+});
+
+// Member route
+Route::controller(MemberController::class)->group(function() {
+    Route::get('/login', 'login')->name('login'); // Showing the login page
+    Route::get('/registration', 'registration')->name('registration'); // Showing the registration page
+    Route::post('/register-user', 'registerUser')->name('registerUser'); // Backend route for registering user
+    Route::post('/login-user', 'loginUser')->name('loginUser'); // Backend route for logging in user
 });
 
 
@@ -64,15 +73,6 @@ Route::get('/score', function () {
 });
 
 // backend notice
-Route::get('/login', function () {
-    return view('pages/account/login');
-});
-Route::get('/login2', function () {
-    return view('pages/account/login2');
-});
-Route::get('/registration', function () {
-    return view('pages/account/regist');
-});
 Route::get('/record', function () {
     return view('pages/account/record');
 });

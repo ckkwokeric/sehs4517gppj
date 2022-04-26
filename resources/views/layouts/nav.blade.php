@@ -107,7 +107,7 @@ nav ul li a:hover:after{
     nav ul ul li {
         position: relative;
         margin: 0;
-        width: 160px;
+        width: 100%;
         float: none;
         display: list-item;
         border-bottom: 1px solid rgba(0, 0, 0, 0.3)
@@ -250,7 +250,7 @@ nav ul li a:hover:after{
                 </ul>
             </li>
             <li>
-                <a href="{{ url('login') }}"><i class="fa-solid fa-arrow-right-to-bracket"></i></a>
+                <a href="{{ route('login') }}"><i class="fa-solid fa-arrow-right-to-bracket"></i></a>
             </li>
         </ul>
     </nav>

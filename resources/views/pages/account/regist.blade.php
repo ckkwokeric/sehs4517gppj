@@ -209,43 +209,44 @@
     <div class="container2">
         <div class="container3">
             <div class="title">Registration</div>
-            <form action="">
+            <form action="{{ route('registerUser') }}" method="POST">
+                @csrf
                 <div class="user-details">
                     <div class="input-box">
                         <span class="details">First Name</span>
-                        <input type="text" class="field error" placeholder="Firstname" required>
-                        <span class="message error-message">Incorrect input</span>
+                        <input type="text" class="field @error('fname') error @enderror" placeholder="CHAN" name="fname" value="{{ old('fname') }}">
+                        <span class="message error-message">@error('fname') {{ $message }} @enderror</span>
                     </div>
                     <div class="input-box">
                         <span class="details">Last Name</span>
-                        <input type="text" class="field error" placeholder="Lastname" required>
-                        <span class="message error-message">Incorrect input</span>
+                        <input type="text" class="field @error('lname') error @enderror" placeholder="Tai Man" name="lname" value="{{ old('lname') }}">
+                        <span class="message error-message">@error('lname') {{ $message }} @enderror</span>
                     </div>
                     <div class="input-box">
                         <span class="details">Email</span>
-                        <input type="text" class="field error" placeholder="Email" required>
-                        <span class="message error-message">Incorrect input</span>
+                        <input type="text" class="field @error('email') error @enderror" placeholder="example@test.com" name="email" value="{{ old('email') }}">
+                        <span class="message error-message">@error('email') {{ $message }} @enderror</span>
                     </div>
                     <div class="input-box">
                         <span class="details">Phone Number</span>
-                        <input type="text" class="field error" placeholder="Phone number" required>
-                        <span class="message error-message">Incorrect input</span>
+                        <input type="text" class="field @error('phoneNum') error @enderror" placeholder="8-digit phone number" name="phoneNum" value="{{ old('phoneNum') }}">
+                        <span class="message error-message">@error('phoneNum') {{ $message }} @enderror</span>
                     </div>
                     <div class="input-box">
                         <span class="details">Password</span>
-                        <input type="password" class="field error" placeholder="Password" required>
-                        <span class="message error-message">Incorrect input</span>
+                        <input type="password" class="field @error('password') error @enderror" placeholder="Password" name="password" value="{{ old('password') }}">
+                        <span class="message error-message">@error('password') {{ $message }} @enderror</span>
                     </div>
                     <div class="input-box">
-                        <span class="details">Date</span>
-                        <input type="date" class="field error" placeholder="Firstname" required>
-                        <span class="message error-message">Incorrect input</span>
+                        <span class="details">Date of Birth</span>
+                        <input type="date" class="field @error('dob') error @enderror" placeholder="Firstname" name="dob" value="{{ old('dob') }}">
+                        <span class="message error-message">@error('dob') {{ $message }} @enderror</span>
                     </div>
                 </div>
                 <div class="gender-details">
-                    <input type="radio" name="gender" id="dot-1" class="field">
-                    <input type="radio" name="gender" id="dot-2">
-                    <input type="radio" name="gender" id="dot-3">
+                    <input type="radio" name="gender" id="dot-1" value="male">
+                    <input type="radio" name="gender" id="dot-2" value="female">
+                    <input type="radio" name="gender" id="dot-3" value="n/a">
                     <span class="gender-title">Gender</span>
                     <div class="category">
                         <label for="dot-1">
@@ -261,12 +262,17 @@
                             <span class="gender">Prefer not to say</span>
                         </label>
                     </div>
-                    <span class="message error-message">Must be filled</span>
+                    <span class="message error-message">@error('gender') {{ $message }} @enderror</span>
                 </div>
                 <div class="btn">
                     <input type="submit" value="Registration" class="field">
                 </div>
             </form>
+           @if (session('success'))
+            <p>{{ session('success') }}</p>
+           @elseif (session('fail'))
+           <p>{{ session('fail') }}</p>
+           @endif
         </div>
     </div>
 
