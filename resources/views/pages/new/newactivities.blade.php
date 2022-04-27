@@ -258,13 +258,14 @@
             </thead>
             <tbody>
                 @auth
+
                 {{-- Loop through the evenet table in the database using @foreach directive --}}
                 @foreach ($results as $result)
                 <tr>
                     <td>{{ $result->organize_date }}</td>
                     <td>{{ $result->start_time }}</td>
                     <td>{{ $result->end_time }}</td>
-                    <td>{{ $result->venue_id }}</td>
+                    <td>{{ DB::table('venues')->where('venue_id', $result->venue_id)->value('venue_name') }}</td>
                     <td>{{ $result->evt_detail }}</td>
                     <td>
                         <form
@@ -285,7 +286,7 @@
                     <td>{{ $result->organize_date }}</td>
                     <td>{{ $result->start_time }}</td>
                     <td>{{ $result->end_time }}</td>
-                    <td>{{ $result->venue_id }}</td>
+                    <td>{{ DB::table('venues')->where('venue_id', $result->venue_id)->value('venue_name') }}</td>
                     <td>{{ $result->evt_detail }}</td>
                     <td>
                         <button type="submit" class="joinBtn">Join</button>

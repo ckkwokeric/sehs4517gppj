@@ -9,7 +9,7 @@ class ActivitiesServicesController extends Controller
 {
     public function newActivities() {
         $results = DB::table('events')->get();
-        return view('pages.new.newactivities', ['results'=>$results]);
+        return view('pages.new.newactivities', ['results' => $results]);
     }
 
     public function newServices() {

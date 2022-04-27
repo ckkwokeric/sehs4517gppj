@@ -14,6 +14,6 @@ class Event extends Model
     protected $primaryKey = 'evt_id';
 
     public function venues() {
-        return $this->hasMany(Venue::class);
+        return $this->hasMany(Venue::class,'venue_id');
     }
 }

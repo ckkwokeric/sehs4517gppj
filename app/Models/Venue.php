@@ -14,6 +14,6 @@ class Venue extends Model
     protected $primaryKey = 'venue_id';
 
     public function event() {
-        return $this->belongsTo(Event::class);
+        return $this->belongsTo(Event::class, 'venue_id');
     }
 }

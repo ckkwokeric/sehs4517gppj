@@ -280,7 +280,7 @@ nav ul li a:hover:after{
             @if ( auth()->user()->is_admin != null )
             <li>
                 <a href="{{ route('record') }}">
-                    Manager Record
+                    Manage Record
                 </a>
             </li>
             @endif
