@@ -70,14 +70,15 @@ Route::controller(UserController::class)->group(function() {
     Route::post('/logout-user', 'logoutUser')->name('logoutUser'); // Backend route for logging in user
 });
 
-// if the user
+// Only users have is_admin = 1 can access this route
 Route::group(['middleware' => ['admin']], function () {
     Route::get('/record', function () {
         return view('pages/account/record');
     })->name('record');
 });
 
-
+// Only logged in users have access to these route,
+// the website will automatcially redirect to login page
 Route::group(['middleware' => ['auth']], function () {
     Route::get('/youthgame', [GameQuestionController::class, 'showDashboard'])->name('youthgame');
     Route::post('/youthgame/processdata', [GameQuestionController::class, 'processGameData'])->name('processGameData');

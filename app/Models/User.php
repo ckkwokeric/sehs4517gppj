@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use App\Models\EventEnrollment;
 
 class User extends Authenticatable
 {
@@ -15,6 +16,10 @@ class User extends Authenticatable
     protected $table = 'users';
     protected $primaryKey = 'user_id';
 
+
+    public function eventenrolls() {
+        return $this->hasMany(EventEnrollment::class, 'user_id');
+    }
 
     /**
      * The attributes that are mass assignable.

@@ -235,9 +235,9 @@
         <img src="{{ asset('img/activity/light-bulk.png') }}" class="bulk">
     </div>
 
-    @if (session('joinSuccess'))
+    @if (session('joinMsg'))
     <div class="container2">
-        <p>{{ session('joinSuccess') }}</p>
+        <p>{{ session('joinMsg') }}</p>
     </div>
     @endif
 

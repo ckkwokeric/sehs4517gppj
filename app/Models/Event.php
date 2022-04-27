@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Venue;
+use App\Models\EventEnrollment;
 
 class Event extends Model
 {
@@ -15,5 +16,9 @@ class Event extends Model
 
     public function venues() {
         return $this->hasMany(Venue::class,'venue_id');
+    }
+
+    public function eventenrolls() {
+        return $this->hasMany(EventEnrollment::class, 'evt_id');
     }
 }

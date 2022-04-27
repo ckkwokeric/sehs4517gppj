@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Models\EventEnrollment;
 
 class ActivitiesServicesController extends Controller
 {
@@ -30,8 +31,19 @@ class ActivitiesServicesController extends Controller
 
 
     public function joinActivity(Request $request, $evt_id, $user_id) {
-        DB::table('events')->where('evt_id', $evt_id)->update(['user_id' => $user_id]);
-        return back()->with('joinSuccess', 'You have successfully joined the activity');
+
+        // Check if the user have previously joined the event
+        // If so, no record will be added to the database and redirect back to the page with warning message
+        if (EventEnrollment::where('user_id', $user_id)->where('evt_id', $evt_id)->first()) {
+            return back()->with('joinMsg', 'You are not allowed to join a event twice!');
+        }
+
+        EventEnrollment::create([
+            'user_id' => $user_id,
+            'evt_id' => $evt_id,
+        ]);
+
+        return back()->with('joinMsg', 'You have successfully joined the activity');
     }
 
 }
