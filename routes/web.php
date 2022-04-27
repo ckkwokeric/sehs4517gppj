@@ -37,6 +37,9 @@ Route::controller(ActivitiesServicesController::class)->group(function() {
     Route::get('/newservervices/service1', 'subService1')->name('subService1');
     Route::get('/newservervices/service2', 'subService2')->name('subService2');
     Route::get('/newservervices/service3', 'subService3')->name('subService3');
+
+
+    Route::put('/newactivities/{evt_id}/{user_id}', 'joinActivity')->name('joinActivity');
 });
 
 // Youth route

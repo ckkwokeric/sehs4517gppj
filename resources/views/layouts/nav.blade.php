@@ -52,6 +52,7 @@
         display: inline-block;
         background: #008DD0;
         margin: 0 5px;
+        z-index: 99;
     }
 
     nav ul li a {

@@ -10,65 +10,68 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1ed92467bb.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 
     <style>
-        .container2 {
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
             font-family: 'Montserrat', sans-serif;
         }
 
-        .container3 {
-            margin-left: 100px;
-            margin-right: 100px;
-            justify-content: center;
-            margin-top: 30px;
+        .container2 {
+            margin: 7% 5% 5%;
             position: relative;
-
         }
 
-        .container3 img:nth-child(1) {
-            position: absolute;
-            top: -135px;
-            left: -100px;
-        }
-
-        .container3 img:nth-child(2) {
-            margin-top: 77px;
+        .container2 img {
             width: 100%;
         }
 
-        .container3 img:nth-child(3) {
+        .container2 .bulk {
+            width: 23%;
             position: absolute;
-            left: 300px;
-            bottom: -250px;
+            left: 50px;
         }
 
-        .container4 {
-            position: relative;
+        .container3 {
+            margin: 5%;
+        }
+
+        .container3 span,
+        .container4 span {
+            font-size: 32px;
+            line-height: 44px;
+            letter-spacing: 0.05em;
+            font-weight: 700;
+
         }
 
         .content-table {
             border-collapse: collapse;
             margin: 25px 0;
-            font-size: 0.9em;
-            min-width: 400px;
-            margin-left: 40px;
-            margin-right: 40px;
-            justify-content: center;
+            width: 100%;
         }
 
         .content-table thead tr {
             background: #4EB4D4;
             color: white;
             text-align: center;
-            font-weight: regular;
-            font-size: 20px;
+            font-size: 16px;
             line-height: 19px;
+            font-weight: 600;
         }
 
         .content-table th,
         .content-table td {
-            padding: 30px 25px;
-            font-size: 18px;
+            padding: 10px 15px;
+            text-align: center;
         }
 
         .content-table tbody tr {
@@ -88,329 +91,211 @@
             border-bottom: 2px solid #4EB4D4;
         }
 
-        .container4 .blue-arrow {
-            position: absolute;
-
-            left: 300px;
-            top: 700px;
+        .container4 {
+            margin: 5%;
         }
 
-
-        .container5 .name,
-        .container4 .name {
+        .container9 {
             display: flex;
-            margin-left: 38px;
-            margin-bottom: 26px;
-            font-weight: 600;
-            font-size: 26px;
-            margin-top: 170px;
         }
 
-        .container5 .name img,
-        .container4 .name img {
-            padding-top: 17px;
-            padding-right: 10px;
+        .container10 {
+            width: calc(100% / 3);
+            height: 619px;
+            padding-bottom: 50px;
+            margin-top: -4px;
         }
 
-        .items {
-            display: flex;
-            text-align: center;
+        .container10:hover {
+            transform: translate(-10px, -10px);
+            cursor: pointer;
+            transition: 0.2s;
         }
 
-        .items .name {
-            margin: 50px 0;
-            text-align: center;
-            font-size: 20px;
-            display: block;
-        }
-
-        .item1 {
+        .container10.one {
             background: rgba(2, 3, 129, 0.8);
         }
 
-        .item2 {
+        .container10.two {
             background: rgba(252, 185, 0, 0.8);
         }
 
-        .item1 .container6,
-        .item2 .container6 {
-            padding: 0 10px;
-        }
-
-        .item1 .container6 p,
-        .item2 .container6 p {
-            padding: 0 23px;
-            letter-spacing: 0.05em;
-            line-height: 20px;
-            font-size: 14px;
+        .container10 .title {
             color: white;
-        }
-
-        .item2 .container6 p {
-            color: black;
-        }
-
-        .item1 .container6 .name,
-        .item2 .container6 .name {
             font-size: 24px;
+            font-weight: 600;
+            text-align: center;
+            margin: 5% 0;
         }
 
-        .btn {
+        .container10 .images {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container10 .images img {
+            width: 80%;
+        }
+
+        .container10 .info {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: justify;
+            font-size: 16px;
+            color: white;
+            letter-spacing: 0.05em;
+            line-height: 30px;
+        }
+
+        .container10 .info p {
+            width: 80%;
+        }
+
+        .btn-join.two {
             background: #008DD0;
+            color: white;
+            padding: 10px 50px;
+            margin-top: 20px;
+            margin-bottom: 20px;
             display: inline-block;
-            margin-bottom: 98px;
-            padding: 10px 40px;
+            align-items: center;
+            justify-content: center;
             text-transform: uppercase;
-            margin-top: 11px;
+            padding: 10px 20px;
+            font-weight: 700;
+            margin: 50px 39%;
+            border-radius: 5px;
         }
 
-        .btn a {
+        .btn-join.two a {
             color: white;
             text-decoration: none;
+        }
+
+        .btn-join.two:hover {
+            cursor: pointer;
+            transition: 0.2s;
+            opacity: 0.7;
+        }
+
+        .joinBtn {
+            background: #008DD0;
+            border: none;
+            color: white;
+            align-items: center;
+            justify-content: center;
+            text-transform: uppercase;
+            padding: 10px 20px;
+            font-weight: 700;
+            border-radius: 5px;
+        }
+
+        .joinBtn:hover {
+            cursor: pointer;
+            transition: 0.2s;
+            opacity: 0.7;
+        }
+
+        @media all and (max-width:1045px) {
+            .container9 {
+                flex-wrap: wrap;
+            }
+
+            .container10 {
+                width: calc(100% / 2);
+                padding-bottom: 5%;
+            }
+
+            .container10 {
+                margin-bottom: 5px;
+            }
+        }
+
+        @media all and (max-width:600px) {
+            .container10 {
+                width: 100%;
+                margin: 0 5%;
+                padding-bottom: 5%;
+            }
         }
     </style>
 </head>
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-        <script src="https://kit.fontawesome.com/1ed92467bb.js" crossorigin="anonymous"></script>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+<body>
+    @include('layouts.nav')
+    <!-- <body> -->
 
-        <style>
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-}
-.container2{
-    margin:  7% 5% 5%;
-    position: relative;
-}
-.container2 img{
-    width: 100%;
-}
-.container2 .bulk{
-    width: 40%;
-    position: absolute;
-    left: -5%;
-    top: -30%;
-}
-.container3{
-    margin: 5%;
-}
-
-.container3 span, .container4 span{
-    font-size: 32px;
-    line-height: 44px;
-    letter-spacing: 0.05em;
-    font-weight: 700;
-
-}
-.content-table{
-    border-collapse:collapse;
-    margin:25px 0;
-    width: 100%;
-}
-.content-table thead tr{
-    background: #4EB4D4;
-    color:white;
-    text-align:center;
-    font-size: 16px;
-    line-height: 19px;
-    font-weight: 600;
-}
-.content-table th,
-.content-table td
-{
-    padding:10px 15px;
-}
-.content-table tbody tr{
-    border-bottom:1px solid #dddd;
-    color: #4EB4D4;
-}
-.content-table tbody tr{
-    background-color:white;
-}
-.content-table tbody tr:nth-of-type(even){
-    background-color:#fafafa;
-}
-.content-table tbody tr:last-of-type{
-    border-bottom:2px solid #4EB4D4;
-}
-.container4{
-    margin: 5%;
-}
-.container9{
-    display: flex;
-}
-.container10{
-    width: calc(100% / 3);
-    height:619px ;
-    padding-bottom: 50px;
-    margin-top: -4px;
-}
-.container10:hover{
-    transform: translate(-10px,-10px);
-    cursor: pointer;
-    transition: 0.2s;
-}
-.container10.one{
-    background: rgba(2, 3, 129, 0.8);
-}
-.container10.two{
-    background: rgba(252, 185, 0, 0.8);
-}
-.container10 .title{
-    color: white;
-    font-size: 24px;
-    font-weight: 600;
-    text-align: center;
-    margin: 5% 0;
-}
-.container10 .images{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.container10 .images img{
-    width: 80%;
-}
-.container10 .info{
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: justify;
-    font-size: 16px;
-    color: white;
-    letter-spacing: 0.05em;
-    line-height: 30px;
-}
-.container10 .info p{
-    width: 80%;
-}
-.btn-join.two{
-    background: #008DD0;
-    color: white;
-    padding: 10px 50px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    display: inline-block;
-    align-items: center;
-    justify-content: center;
-    text-transform: uppercase;
-    padding: 10px 20px;
-    font-weight: 700;
-   margin: 50px 39%;
-   border-radius: 5px;
-}
-.btn-join.two a{
-    color: white;
-    text-decoration: none;
-}
-.btn-join.two:hover{
-    cursor: pointer;
-    transition: 0.2s;
-    opacity: 0.7;
-}
-@media all and (max-width:1045px){
-    .container9{
-        flex-wrap: wrap;
-    }
-     .container10{
-        width: calc(100% / 2);
-         padding-bottom: 5%;
-     }
-     .container10{
-         margin-bottom: 5px;
-     }
-}
-@media all and (max-width:600px){
-    .container10{
-        width: 100%;
-         margin: 0 5%;
-         padding-bottom: 5%;
-     }
-}
-
-        </style>
-
-@include('layouts.nav')
-<!-- <body> -->
-
-<!-- content -->
-<div class="container2">
-            <img src="{{ asset('img/new-activities.png') }}">
-            <img src="{{ asset('img/activity/light-bulk.png') }}" class="bulk">
+    <!-- content -->
+    <div class="container2">
+        <img src="{{ asset('img/new-activities.png') }}">
+        <img src="{{ asset('img/activity/light-bulk.png') }}" class="bulk">
     </div>
+
+    @if (session('joinSuccess'))
+    <div class="container2">
+        <p>{{ session('joinSuccess') }}</p>
+    </div>
+    @endif
+
 
     <div class="container3">
         <img src="{{ asset('img/activity/flower-icon.png') }}">
         <span>New Timetable</span>
         <table class="content-table">
-                <thead>
-                    <tr>
-                        <th>First Section</th>
-                        <th>Second Section</th>
-                        <th>Third Section</th>
-                        <th>Time</th>
-                        <th>Language</th>
-                        <th>Activities</th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>16/4/2022 Saturday</td>
-                        <td>17/4/2022 Saturday</td>
-                        <td>/</td>
-                        <td>10:00 - 13:00</td>
-                        <td>Cantonese</td>
-                        <td>Artificial Intelligence Foundation Class</td>
-                        <td>join</td>
-                    </tr>
-                    <tr>
-                        <td>16/4/2022 Saturday</td>
-                        <td>17/4/2022 Saturday</td>
-                        <td>/</td>
-                        <td>10:00 - 13:00</td>
-                        <td>Cantonese</td>
-                        <td>Mobile Application Work Class(Parent-child)</td>
-                        <td>join</td>
-                    </tr>
-                    <tr>
-                        <td>16/4/2022 Saturday</td>
-                        <td>17/4/2022 Saturday</td>
-                        <td>20/4/2022 Wednesday</td>
-                        <td>10:00 - 13:00</td>
-                        <td>Cantonese</td>
-                        <td>Artificial Intelligence Foundation Class</td>
-                        <td>join</td>
-                    </tr>
-                    <tr>
-                        <td>16/4/2022 Saturday</td>
-                        <td>17/4/2022 Saturday</td>
-                        <td>/</td>
-                        <td>10:00 - 13:00</td>
-                        <td>Cantonese</td>
-                        <td>Artificial Intelligence Foundation Class</td>
-                        <td>join</td>
-                    </tr>
-                    <tr>
-                        <td>16/4/2022 Saturday</td>
-                        <td>17/4/2022 Saturday</td>
-                        <td>/</td>
-                        <td>10:00 - 13:00</td>
-                        <td>Cantonese</td>
-                        <td>Competency-Based Online Work Class:Knowledge of Artificial Intelligence</td>
-                        <td>join</td>
-                    </tr>
-                </tbody>
-    </table>
+            <thead>
+                <tr>
+                    <th>Date of Event</th>
+                    <th>Start Time</th>
+                    <th>End Time</th>
+                    <th>Venue</th>
+                    <th>Event Detail</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @auth
+                {{-- Loop through the evenet table in the database using @foreach directive --}}
+                @foreach ($results as $result)
+                <tr>
+                    <td>{{ $result->organize_date }}</td>
+                    <td>{{ $result->start_time }}</td>
+                    <td>{{ $result->end_time }}</td>
+                    <td>{{ $result->venue_id }}</td>
+                    <td>{{ $result->evt_detail }}</td>
+                    <td>
+                        <form
+                            action="{{ route('joinActivity', ['evt_id' => $result->evt_id, 'user_id' => auth()->user()->user_id]) }}"
+                            method="POST">
+                            @csrf
+                            @method('PUT')
+                            <button type="submit" class="joinBtn">Join</button>
+                        </form>
+                    </td>
+                </tr>
+                @endforeach
+
+                @else
+
+                @foreach ($results as $result)
+                <tr>
+                    <td>{{ $result->organize_date }}</td>
+                    <td>{{ $result->start_time }}</td>
+                    <td>{{ $result->end_time }}</td>
+                    <td>{{ $result->venue_id }}</td>
+                    <td>{{ $result->evt_detail }}</td>
+                    <td>
+                        <button type="submit" class="joinBtn">Join</button>
+                    </td>
+                </tr>
+                @endforeach
+
+                @endauth
+            </tbody>
+        </table>
     </div>
 
     <div class="container4">
@@ -419,51 +304,54 @@
     </div>
 
     <div class="container9">
-            <div class="container10 one">
-                <div class="title">
-                    Campsite
-                </div>
-                <div class="images">
-                    <img src="{{ asset('img/activity/Campsites.png') }}">
-                </div>
-                <div class="info">
-                    <p>Notable changes to the race weekend schedule is the ASICS half marathon moved to Saturday and the Village Roadshow Theme Parks Gold Coast Marathon starting earlier at 6am.</p>
-                </div>
-
-                <div class="btn-join two">
-                    <a href="">Join</a>
-                </div>
+        <div class="container10 one">
+            <div class="title">
+                Campsite
             </div>
-            <div class="container10 two">
-                <div class="title">
+            <div class="images">
+                <img src="{{ asset('img/activity/Campsites.png') }}">
+            </div>
+            <div class="info">
+                <p>Notable changes to the race weekend schedule is the ASICS half marathon moved to Saturday and the
+                    Village Roadshow Theme Parks Gold Coast Marathon starting earlier at 6am.</p>
+            </div>
+
+            <div class="btn-join two">
+                <a href="">Join</a>
+            </div>
+        </div>
+        <div class="container10 two">
+            <div class="title">
                 Adventure
-                    </div>
-                    <div class="images">
-                        <img src="{{ asset('img/activity/Adventure.png') }}">
-                    </div>
-                    <div class="info">
-                        <p>Notable changes to the race weekend schedule is the ASICS half marathon moved to Saturday and the Village Roadshow Theme Parks Gold Coast Marathon starting earlier at 6am.</p>
-                    </div>
-
-                    <div class="btn-join two">
-                        <a href="">Join</a>
-                    </div>
             </div>
-            <div class="container10 one">
-                <div class="title">
+            <div class="images">
+                <img src="{{ asset('img/activity/Adventure.png') }}">
+            </div>
+            <div class="info">
+                <p>Notable changes to the race weekend schedule is the ASICS half marathon moved to Saturday and the
+                    Village Roadshow Theme Parks Gold Coast Marathon starting earlier at 6am.</p>
+            </div>
+
+            <div class="btn-join two">
+                <a href="">Join</a>
+            </div>
+        </div>
+        <div class="container10 one">
+            <div class="title">
                 Night Hiking
-                    </div>
-                    <div class="images">
-                        <img src="{{ asset('img/activity/night-hiking.png') }}">
-                    </div>
-                    <div class="info">
-                        <p>Notable changes to the race weekend schedule is the ASICS half marathon moved to Saturday and the Village Roadshow Theme Parks Gold Coast Marathon starting earlier at 6am.</p>
-                    </div>
-
-                    <div class="btn-join two">
-                        <a href="">Join</a>
-                    </div>
             </div>
+            <div class="images">
+                <img src="{{ asset('img/activity/night-hiking.png') }}">
+            </div>
+            <div class="info">
+                <p>Notable changes to the race weekend schedule is the ASICS half marathon moved to Saturday and the
+                    Village Roadshow Theme Parks Gold Coast Marathon starting earlier at 6am.</p>
+            </div>
+
+            <div class="btn-join two">
+                <a href="">Join</a>
+            </div>
+        </div>
     </div>
 
 

@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('venues', function (Blueprint $table) {
             $table->bigIncrements('venue_id');
-            $table->string('venue_name', 30);
-            $table->string('location', 50);
+            $table->string('venue_name', 80);
+            $table->string('location', 150);
             $table->timestamps();
         });
     }

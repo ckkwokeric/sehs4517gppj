@@ -18,9 +18,7 @@ return new class extends Migration
             $table->date('organize_date');
             $table->time('start_time');
             $table->time('end_time');
-
-            // $table->integer('venue_id');
-            // $table->integer('mem_id');
+            $table->text('evt_detail');
             $table->timestamps();
         });
     }

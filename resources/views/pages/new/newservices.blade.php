@@ -28,6 +28,7 @@
         }
 
         .container2 img {
+            padding-top:10px;
             width: 100%;
         }
 

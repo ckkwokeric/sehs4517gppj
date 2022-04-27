@@ -193,7 +193,7 @@
             the class sizes small and deliver the experiment materials straight to your doorstep! All you need to
             prepare is a pencil, some water and the spirit to experiment!</p>
         <div class="btn-more">
-            <a href="{{ url('activity') }}">More</a>
+            <a href="{{ route('newActivities') }}">More</a>
         </div>
 
     </div>
@@ -208,18 +208,13 @@
                     in need to receive hot meals / food coupons for a week, your donation can also help us to carry out
                     other all-round supporting services.
                 </p>
-                <p class="info">All administrative expenses of this programme are sponsored by the Kuk’s Board of
+                <p class="info">All administrative expenses of this programme are sponsored by the Kuk's Board of
                     Directors.</p>
             </div>
         </div>
     </div>
 
-        <div class="container2">
-            <!-- new servies -->
-            <div class="new">
-                <p class="type">New Activities</p>
-                <div class="poster2">
-                    <img src="{{ asset('img/new-activities.png') }}">
+
 
     @include('layouts.footer')
 

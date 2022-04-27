@@ -14,8 +14,8 @@ return new class extends Migration
     public function up()
     {
         Schema::table('events', function(Blueprint $table) {
-            $table->foreignId('venue_id')->constrained('venues', 'venue_id')->cascadeOnDelete();
-            $table->foreignId('user_id')->constrained('users', 'user_id')->cascadeOnDelete();
+            $table->foreignId('venue_id')->nullable()->constrained('venues', 'venue_id')->cascadeOnDelete();
+            $table->foreignId('user_id')->nullable()->constrained('users', 'user_id')->cascadeOnDelete();
         });
 
         Schema::table('game_history', function(Blueprint $table) {
