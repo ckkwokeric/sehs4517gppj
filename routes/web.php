@@ -6,6 +6,7 @@ use App\Http\Controllers\ActivitiesServicesController;
 use App\Http\Controllers\ElderlyController;
 use App\Http\Controllers\YouthController;
 use App\Http\Controllers\UserController;
+use Illuminate\Support\Facades\Auth;
 
 
 /*
@@ -64,16 +65,24 @@ Route::controller(UserController::class)->group(function() {
     Route::post('/logout-user', 'logoutUser')->name('logoutUser'); // Backend route for logging in user
 });
 
+// if the user
+Route::group(['middleware' => ['admin']], function () {
+    Route::get('/record', function () {
+        return view('pages/account/record');
+    })->name('record');
+});
 
 
-Route::get('/questionnaire', function () {
-    return view('pages/questionnaire/questionnaire');
+Route::group(['middleware' => ['auth']], function () {
+    Route::get('/questionnaire', function () {
+        return view('pages/questionnaire/questionnaire');
+    })->name('questionnaire');
+
+    Route::get('/score', function () {
+        return view('pages/questionnaire/score');
+    })->name('score');
 });
-Route::get('/score', function () {
-    return view('pages/questionnaire/score');
-});
+
+
 
 // backend notice
-Route::get('/record', function () {
-    return view('pages/account/record');
-});

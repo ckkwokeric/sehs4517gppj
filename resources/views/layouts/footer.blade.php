@@ -72,17 +72,17 @@
 <div class="container-end">
     <footer>
         <ul class="so-icon">
-            <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
-            <li><a href=""><i class="fa-brands fa-linkedin"></i></a></li>
-            <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
         </ul>
         <ul class="menu">
-            <li><a href="">Home</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Youth Services</a></li>
-            <li><a href="">Elder Services</a></li>
-            <li><a href="">Contact</a></li>
+            <li><a href="{{ route('home') }}">Home</a></li>
+            <li><a href="{{ route('home') }}">About</a></li>
+            <li><a href="{{ route('youth1') }}">Youth Services</a></li>
+            <li><a href="{{ route('elderlysupport') }}">Elder Services</a></li>
+            <li><a href="{{ route('contact') }}">Contact</a></li>
         </ul>
-        <p>@2022 Community Center | All Rights Reserved</p>
+        <p>	&copy; 2022 Community Center | All Rights Reserved</p>
     </footer>
 </div>

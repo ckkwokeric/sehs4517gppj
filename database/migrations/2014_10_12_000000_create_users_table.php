@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('password');
             $table->string('phone_no', 10);
             $table->string('dob', 10);
+            $table->boolean('is_admin')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

@@ -257,7 +257,7 @@ nav ul li a:hover:after{
             </li>
             <li><a href="{{ route('contact') }}">Contact Us</a></li>
             <li>
-                <label for="btn-4" class="showing">Language</label>
+                <label for="btn-4" class="showing">Language +</label>
                 <a href=""><i class="fa-solid fa-earth-americas"></i></a>
                 <input type="checkbox" id="btn-4">
                 <ul class="col-4">
@@ -266,9 +266,24 @@ nav ul li a:hover:after{
                 </ul>
             </li>
 
+            {{-- This part is to determine if the user has logged in or not --}}
+            {{-- If user has logged in, it will shows the code between @auth and @else --}}
+            {{-- If user has not logged in, it will shows the code between @else and @endauth --}}
             @auth
-            <li><a href="#">Welcome {{ auth()->user()->first_name }}</a>
+            <li>
+                <a href="#">
+                    Welcome {{ auth()->user()->first_name }}
+                </a>
             </li>
+
+            @if ( auth()->user()->is_admin != null )
+            <li>
+                <a href="{{ route('record') }}">
+                    Manager Record
+                </a>
+            </li>
+            @endif
+
             <li>
                 <form method="POST" action="{{ route('logoutUser') }}">
                     @csrf
