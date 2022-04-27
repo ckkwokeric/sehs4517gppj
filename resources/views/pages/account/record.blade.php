@@ -93,74 +93,74 @@
 <body>
 
     @include('layouts.nav')
+
     <!-- List of member -->
     <div class="container2">
         <div class="tableHeader">
             <h3>List of member</h3>
-            <button class="pdfBtn">FUCK THIS SHIT</button>
+            <button class="pdfBtn">Export to PDF</button>
         </div>
         <table class="content-table">
             <thead>
                 <tr>
-                    <th>First Section</th>
-                    <th>Second Section</th>
-                    <th>Third Section</th>
-                    <th>Time</th>
-                    <th>Language</th>
-                    <th>Activities</th>
-                    <th></th>
+                    <th>ID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Gender</th>
+                    <th>Phone Number</th>
+                    <th>Date</th>
                 </tr>
             </thead>
             <tbody>
+                <?php $users = DB::table('users')->get() ?>
+                @foreach ($users as $user)
                 <tr>
-                    <td>16/4/2022 Saturday</td>
-                    <td>17/4/2022 Saturday</td>
-                    <td>/</td>
-                    <td>10:00 - 13:00</td>
-                    <td>Cantonese</td>
-                    <td>Artificial Intelligence Foundation Class</td>
-                    <td>join</td>
+                    <td>{{ $user->user_id }}</td>
+                    <td>{{ $user->first_name }}</td>
+                    <td>{{ $user->last_name }}</td>
+                    <td>{{ $user->email }}</td>
+                    <td>{{ ucwords($user->gender) }}</td>
+                    <td>{{ $user->phone_no }}</td>
+                    <td>{{ $user->dob }}</td>
                 </tr>
-                <tr>
-                    <td>16/4/2022 Saturday</td>
-                    <td>17/4/2022 Saturday</td>
-                    <td>/</td>
-                    <td>10:00 - 13:00</td>
-                    <td>Cantonese</td>
-                    <td>Mobile Application Work Class(Parent-child)</td>
-                    <td>join</td>
-                </tr>
-                <tr>
-                    <td>16/4/2022 Saturday</td>
-                    <td>17/4/2022 Saturday</td>
-                    <td>20/4/2022 Wednesday</td>
-                    <td>10:00 - 13:00</td>
-                    <td>Cantonese</td>
-                    <td>Artificial Intelligence Foundation Class</td>
-                    <td>join</td>
-                </tr>
-                <tr>
-                    <td>16/4/2022 Saturday</td>
-                    <td>17/4/2022 Saturday</td>
-                    <td>/</td>
-                    <td>10:00 - 13:00</td>
-                    <td>Cantonese</td>
-                    <td>Artificial Intelligence Foundation Class</td>
-                    <td>join</td>
-                </tr>
-                <tr>
-                    <td>16/4/2022 Saturday</td>
-                    <td>17/4/2022 Saturday</td>
-                    <td>/</td>
-                    <td>10:00 - 13:00</td>
-                    <td>Cantonese</td>
-                    <td>Competency-Based Online Work Class:Knowledge of Artificial Intelligence</td>
-                    <td>join</td>
-                </tr>
+                @endforeach
             </tbody>
         </table>
     </div>
 
+    <!-- List Event -->
+    <div class="container2">
+        <div class="tableHeader">
+            <h3>List of Event</h3>
+            <button class="pdfBtn">Export to PDF</button>
+        </div>
+        <table class="content-table">
+            <thead>
+                <tr>
+                    <th>Event ID</th>
+                    <th>Organize Date</th>
+                    <th>Start Time</th>
+                    <th>End Tiem</th>
+                    <th>Event Detail</th>
+                    <th>Venue</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php $events = DB::table('events')->get() ?>
+                @foreach ($events as $event)
+                <tr>
+                    <td>{{ $event->evt_id }}</td>
+                    <td>{{ $event->organize_date }}</td>
+                    <td>{{ $event->start_time }}</td>
+                    <td>{{ $event->end_time }}</td>
+                    <td>{{ $event->evt_detail }}</td>
+                    <td>{{ DB::table('venues')->where('venue_id', $event->venue_id)->first()->venue_name }}</td>
+                </tr>
+                @endforeach
+            </tbody>
+        </table>
+    </div>
     @include('layouts.footer')
 
 </body>
