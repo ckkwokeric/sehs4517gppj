@@ -218,7 +218,7 @@
         <div class="container2">
             <h1>Are you depress?</h1>
             <h3>A series of questions designed to assess your emotional, physical, and intellectual symptoms.</h3>
-            <button class="submit"><a href="{{ url('questionnaire') }}">Make a test</a> </button>
+            <button class="submit"><a href="{{ route('youthgame') }}">Make a test</a> </button>
         </div>
     </header>
     <section class="content">

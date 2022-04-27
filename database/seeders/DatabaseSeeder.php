@@ -7,6 +7,7 @@ use Illuminate\Database\Seeder;
 use App\Models\User;
 use App\Models\Venue;
 use App\Models\Event;
+use App\Models\GameQuestion;
 
 class DatabaseSeeder extends Seeder
 {
@@ -21,13 +22,17 @@ class DatabaseSeeder extends Seeder
         User::unguard();
         Venue::unguard();
         Event::unguard();
+        GameQuestion::unguard();
 
         $this->call(UsersSeeder::class);
         $this->call(VenueSeeder::class);
         $this->call(EventSeeder::class);
+        $this->call(GameQuestionSeeder::class);
 
         User::reguard();
         Venue::reguard();
         Event::reguard();
+        GameQuestion::reguard();
+
     }
 }

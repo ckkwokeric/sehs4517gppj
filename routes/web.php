@@ -6,6 +6,7 @@ use App\Http\Controllers\ActivitiesServicesController;
 use App\Http\Controllers\ElderlyController;
 use App\Http\Controllers\YouthController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\GameQuestionController;
 use Illuminate\Support\Facades\Auth;
 
 
@@ -77,9 +78,8 @@ Route::group(['middleware' => ['admin']], function () {
 
 
 Route::group(['middleware' => ['auth']], function () {
-    Route::get('/questionnaire', function () {
-        return view('pages/questionnaire/questionnaire');
-    })->name('questionnaire');
+    Route::get('/youthgame', [GameQuestionController::class, 'showDashboard'])->name('youthgame');
+    Route::post('/youthgame/processdata', [GameQuestionController::class, 'processGameData'])->name('processGameData');
 
     Route::get('/score', function () {
         return view('pages/questionnaire/score');

@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('game_history', function (Blueprint $table) {
             $table->bigIncrements('history_id');
-            $table->integer('num_of_correct_ans');
+            $table->integer('total_score');
             $table->date('played_date');
             $table->timestamps();
         });

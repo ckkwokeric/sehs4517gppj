@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('game_questions', function (Blueprint $table) {
             $table->bigIncrements('q_id');
+            $table->text('q_description');
             $table->timestamps();
         });
     }
