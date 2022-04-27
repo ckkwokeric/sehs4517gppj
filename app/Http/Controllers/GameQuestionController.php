@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\GameQuestion;
 use Illuminate\Support\Facades\DB;
+use App\Models\GameHistory;
+
 
 
 
@@ -45,9 +47,19 @@ class GameQuestionController extends Controller
             'q_10.required' => $errorMsg,
         ]);
 
+        $totalScore = 0;
 
-        dd($request);
+        foreach($request->input() as $input) {
+            $totalScore += (int)$input;
+        }
 
+        GameHistory::create([
+            'total_score' => $totalScore,
+            'played_date' => now()->format('Y-m-d'),
+            'user_id' => auth()->user()->user_id,
+        ]);
+
+        return redirect()->route('showResult')->with('totalScore', $totalScore);
 
     }
 }

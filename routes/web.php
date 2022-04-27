@@ -7,6 +7,7 @@ use App\Http\Controllers\ElderlyController;
 use App\Http\Controllers\YouthController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\GameQuestionController;
+use App\Http\Controllers\GameHistoryController;
 use Illuminate\Support\Facades\Auth;
 
 
@@ -81,11 +82,5 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/youthgame', [GameQuestionController::class, 'showDashboard'])->name('youthgame');
     Route::post('/youthgame/processdata', [GameQuestionController::class, 'processGameData'])->name('processGameData');
 
-    Route::get('/score', function () {
-        return view('pages/questionnaire/score');
-    })->name('score');
+    Route::get('youthgame/result', [GameHistoryController::class, 'showResultPage'])->name('showResult');
 });
-
-
-
-// backend notice

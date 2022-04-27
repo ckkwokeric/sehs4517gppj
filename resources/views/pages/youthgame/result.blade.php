@@ -124,24 +124,24 @@
         <div class="section">
             <p class="title">Kessler Psychological Distress Inventory (K10)</p>
             <div class="mark">
-                <span class="score">26</span>
+                <span class="score">{{ $data }}</span>
                 <span class="total">/100</span>
             </div>
             <div class="container2">
                 <p class="title">Result</p>
-                <div class="result-group">
+                <div class="result-group @if($data <= 19) choose @endif">
                     <p class="s-score">Below 19</p>
                     <p class="result">You seem to be a good state of mind</p>
                 </div>
-                <div class="result-group">
+                <div class="result-group @if($data >= 20 && $data <= 24) choose @endif">
                     <p class="s-score">20-24</p>
                     <p class="result">You have mild emotional distress</p>
                 </div>
-                <div class="result-group choose">
+                <div class="result-group @if($data >= 25 && $data <= 29) choose @endif">
                     <p class="s-score">25-29</p>
                     <p class="result">You have a moderate level of emotional distress</p>
                 </div>
-                <div class="result-group">
+                <div class="result-group @if($data >= 30) choose @endif">
                     <p class="s-score">30 or above</p>
                     <p class="result">You have severe emotional distress</p>
                 </div>
