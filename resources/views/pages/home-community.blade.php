@@ -154,10 +154,8 @@
     <header>
         <p class="info slogo">
             Boundless compassion solidarity in action
-            {{ Auth::user()->first_name }}
         </p>
     </header>
-
 
     <div class="container2">
         <p class="type">New Service</p>

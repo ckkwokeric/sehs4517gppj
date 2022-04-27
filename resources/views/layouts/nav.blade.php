@@ -63,6 +63,22 @@
         position: relative;
     }
 
+    nav ul li button {
+        color: white;
+        background: #008DD0;
+        border: none;
+        line-height: 68px;
+        font-size: 18px;
+        position: relative;
+    }
+
+    nav ul li button:hover {
+        color: cyan;
+        border-radius: 5px;
+        box-shadow: 0 0 5px #33ffff,
+            0 0 5px #33ffff;
+    }
+
     /* nav ul li a:after{
     content:'';
     position: absolute;
@@ -249,9 +265,25 @@ nav ul li a:hover:after{
                     <li><a href="">Chinese</a></li>
                 </ul>
             </li>
-            <li>
-                <a href="{{ route('login') }}"><i class="fa-solid fa-arrow-right-to-bracket"></i></a>
+
+            @auth
+            <li><a href="#">Welcome {{ auth()->user()->first_name }}</a>
             </li>
+            <li>
+                <form method="POST" action="{{ route('logoutUser') }}">
+                    @csrf
+                    <button type="submit">
+                        <i class="fa-solid fa-arrow-right-to-bracket"></i>&nbsp;Logout
+                    </button>
+                </form>
+            </li>
+            @else
+            <li>
+                <a href="{{ route('login') }}"><i class="fa-solid fa-arrow-right-to-bracket"></i>&nbsp;Login</a>
+            </li>
+            @endauth
+
+
         </ul>
     </nav>
 

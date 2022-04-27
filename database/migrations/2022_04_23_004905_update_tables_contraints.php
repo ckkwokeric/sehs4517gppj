@@ -15,11 +15,11 @@ return new class extends Migration
     {
         Schema::table('events', function(Blueprint $table) {
             $table->foreignId('venue_id')->constrained('venues', 'venue_id')->cascadeOnDelete();
-            $table->foreignId('mem_id')->constrained('members', 'mem_id')->cascadeOnDelete();
+            $table->foreignId('user_id')->constrained('users', 'user_id')->cascadeOnDelete();
         });
 
         Schema::table('game_history', function(Blueprint $table) {
-            $table->foreignId('mem_id')->constrained('members', 'mem_id')->cascadeOnDelete();
+            $table->foreignId('user_id')->constrained('users', 'user_id')->cascadeOnDelete();
         });
 
         Schema::table('game_questions', function(Blueprint $table) {

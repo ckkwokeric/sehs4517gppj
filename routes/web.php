@@ -5,7 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ActivitiesServicesController;
 use App\Http\Controllers\ElderlyController;
 use App\Http\Controllers\YouthController;
-use App\Http\Controllers\MemberController;
+use App\Http\Controllers\UserController;
 
 
 /*
@@ -56,11 +56,12 @@ Route::controller(ElderlyController::class)->group(function() {
 });
 
 // Member route
-Route::controller(MemberController::class)->group(function() {
+Route::controller(UserController::class)->group(function() {
     Route::get('/login', 'login')->name('login'); // Showing the login page
     Route::get('/registration', 'registration')->name('registration'); // Showing the registration page
     Route::post('/register-user', 'registerUser')->name('registerUser'); // Backend route for registering user
     Route::post('/login-user', 'loginUser')->name('loginUser'); // Backend route for logging in user
+    Route::post('/logout-user', 'logoutUser')->name('logoutUser'); // Backend route for logging in user
 });
 
 
