@@ -62,6 +62,28 @@
         .content-table tbody tr:last-of-type {
             border-bottom: 2px solid #1E90FF;
         }
+
+        .tableHeader {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .pdfBtn {
+            border: none;
+            background-color: #1E90FF;
+            color:  #fafafa;
+            font-size: 15px;
+            text-align: center;
+            padding: 10px 20px;
+            border-radius: 8px;
+            opacity: 0.8;
+            transition: 0.3s;
+        }
+        .pdfBtn:hover {
+            cursor: pointer;
+            opacity: 1;
+            background-color: #0060bd;
+        }
     </style>
 </head>
 
@@ -71,8 +93,12 @@
 <body>
 
     @include('layouts.nav')
-    <!-- content -->
+    <!-- List of member -->
     <div class="container2">
+        <div class="tableHeader">
+            <h3>List of member</h3>
+            <button class="pdfBtn">FUCK THIS SHIT</button>
+        </div>
         <table class="content-table">
             <thead>
                 <tr>

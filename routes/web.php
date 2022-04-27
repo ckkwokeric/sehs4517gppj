@@ -8,6 +8,7 @@ use App\Http\Controllers\YouthController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\GameQuestionController;
 use App\Http\Controllers\GameHistoryController;
+use App\Http\Controllers\RecordController;
 use Illuminate\Support\Facades\Auth;
 
 
@@ -72,9 +73,7 @@ Route::controller(UserController::class)->group(function() {
 
 // Only users have is_admin = 1 can access this route
 Route::group(['middleware' => ['admin']], function () {
-    Route::get('/record', function () {
-        return view('pages/account/record');
-    })->name('record');
+    Route::get('/admin/record', [RecordController::class, 'showRecordPage'])->name('record');
 });
 
 // Only logged in users have access to these route,
