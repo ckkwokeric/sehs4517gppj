@@ -281,16 +281,18 @@
 
                 @else
 
-                @foreach ($results as $result)
+                @foreach ($results as $indexKey => $result)
                 <tr>
                     <td>{{ $result->organize_date }}</td>
                     <td>{{ $result->start_time }}</td>
                     <td>{{ $result->end_time }}</td>
                     <td>{{ DB::table('venues')->where('venue_id', $result->venue_id)->value('venue_name') }}</td>
                     <td>{{ $result->evt_detail }}</td>
-                    <td>
-                        <button type="submit" class="joinBtn">Join</button>
+                    @if($indexKey == 0)
+                    <td rowspan="{{ $results->count() }}">
+                        Login to join
                     </td>
+                    @endif
                 </tr>
                 @endforeach
 

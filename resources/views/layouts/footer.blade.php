@@ -72,9 +72,9 @@
 <div class="container-end">
     <footer>
         <ul class="so-icon">
-            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-            <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
-            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a href="https://twitter.com/?lang=zh-Hant" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+            <li><a href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+            <li><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
         </ul>
         <ul class="menu">
             <li><a href="{{ route('home') }}">Home</a></li>

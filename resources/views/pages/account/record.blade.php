@@ -78,9 +78,9 @@
             border-radius: 8px;
             opacity: 0.8;
             transition: 0.3s;
+            text-decoration: none
         }
         .pdfBtn:hover {
-            cursor: pointer;
             opacity: 1;
             background-color: #0060bd;
         }
@@ -89,7 +89,6 @@
 
 
 <!-- <body> -->
-
 <body>
 
     @include('layouts.nav')
@@ -98,7 +97,7 @@
     <div class="container2">
         <div class="tableHeader">
             <h3>List of member</h3>
-            <button class="pdfBtn">Export to PDF</button>
+            <a href="{{ URL::to('/admin/downloadpdf') }}" class="pdfBtn">Export to PDF</a>
         </div>
         <table class="content-table">
             <thead>
@@ -112,8 +111,17 @@
                     <th>Date</th>
                 </tr>
             </thead>
+
+            {{-- the html syntax inside the @if directive will only be shown if there are no records in the table --}}
+            @if ($users->isEmpty())
+                <tbody>
+                    <tr>
+                        <td colspan="4" style="text-align: center;">No record</td>
+                    </tr>
+                </tbody>
+            @endif
+
             <tbody>
-                <?php $users = DB::table('users')->get() ?>
                 @foreach ($users as $user)
                 <tr>
                     <td>{{ $user->user_id }}</td>
@@ -129,11 +137,10 @@
         </table>
     </div>
 
-    <!-- List Event -->
+    <!-- List of Event -->
     <div class="container2">
         <div class="tableHeader">
             <h3>List of Event</h3>
-            <button class="pdfBtn">Export to PDF</button>
         </div>
         <table class="content-table">
             <thead>
@@ -146,8 +153,17 @@
                     <th>Venue</th>
                 </tr>
             </thead>
+
+            {{-- the html syntax inside the @if directive will only be shown if there are no records in the table --}}
+            @if ($events->isEmpty())
+                <tbody>
+                    <tr>
+                        <td colspan="4" style="text-align: center;">No record</td>
+                    </tr>
+                </tbody>
+            @endif
+
             <tbody>
-                <?php $events = DB::table('events')->get() ?>
                 @foreach ($events as $event)
                 <tr>
                     <td>{{ $event->evt_id }}</td>
@@ -155,12 +171,89 @@
                     <td>{{ $event->start_time }}</td>
                     <td>{{ $event->end_time }}</td>
                     <td>{{ $event->evt_detail }}</td>
-                    <td>{{ DB::table('venues')->where('venue_id', $event->venue_id)->first()->venue_name }}</td>
+                    <td>{{ $venues->where('venue_id', $event->venue_id)->first()->venue_name }}</td>
                 </tr>
                 @endforeach
             </tbody>
         </table>
     </div>
+
+    <!-- List of member joined event -->
+    <div class="container2">
+        <div class="tableHeader">
+            <h3>List of Joined Events</h3>
+        </div>
+        <table class="content-table">
+            <thead>
+                <tr>
+                    <th>Enrollment ID</th>
+                    <th>Participant ID</th>
+                    <th>Participant Name</th>
+                    <th>Event ID</th>
+                    <th>Joined Event</th>
+                </tr>
+            </thead>
+
+            {{-- the html syntax inside the @if directive will only be shown if there are no records in the table --}}
+            @if ($eventEnrollments->isEmpty())
+                <tbody>
+                    <tr>
+                        <td colspan="4" style="text-align: center;">No record</td>
+                    </tr>
+                </tbody>
+            @endif
+
+            <tbody>
+                @foreach ($eventEnrollments as $enrollment)
+                <tr>
+                    <td>{{ $enrollment->enrollment_id }}</td>
+                    <td>{{ $users->where('user_id', $enrollment->user_id)->first()->user_id }}</td>
+                    <td>{{ $users->where('user_id', $enrollment->user_id)->first()->first_name }}, {{ $users->where('user_id', $enrollment->user_id)->first()->last_name }}</td>
+                    <td>{{ $events->where('evt_id', $enrollment->evt_id)->first()->evt_id }}</td>
+                    <td>{{ $events->where('evt_id', $enrollment->evt_id)->first()->evt_detail }}</td>
+                </tr>
+                @endforeach
+            </tbody>
+        </table>
+    </div>
+
+    <!-- List of Game History -->
+    <div class="container2">
+        <div class="tableHeader">
+            <h3>List of Game History</h3>
+        </div>
+        <table class="content-table">
+            <thead>
+                <tr>
+                    <th>Game History ID</th>
+                    <th>Player</th>
+                    <th>Total score</th>
+                    <th>Played Date</th>
+                </tr>
+            </thead>
+
+            {{-- the html syntax inside the @if directive will only be shown if there are no records in the table --}}
+            @if ($gameHistory->isEmpty())
+                <tbody>
+                    <tr>
+                        <td colspan="4" style="text-align: center;">No record</td>
+                    </tr>
+                </tbody>
+            @endif
+
+            <tbody>
+                @foreach ($gameHistory as $history)
+                <tr>
+                    <td>{{ $history->history_id }}</td>
+                    <td>{{ $users->where('user_id', $history->user_id)->first()->first_name }}, {{ $users->where('user_id', $history->user_id)->first()->last_name }}</td>
+                    <td>{{ $history->total_score }}</td>
+                    <td>{{ $history->play_date }}</td>
+                </tr>
+                @endforeach
+            </tbody>
+        </table>
+    </div>
+
     @include('layouts.footer')
 
 </body>

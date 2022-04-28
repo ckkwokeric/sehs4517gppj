@@ -74,6 +74,7 @@ Route::controller(UserController::class)->group(function() {
 // Only users have is_admin = 1 can access this route
 Route::group(['middleware' => ['admin']], function () {
     Route::get('/admin/record', [RecordController::class, 'showRecordPage'])->name('record');
+    Route::get('/admin/downloadpdf', [RecordController::class, 'createPDF']);
 });
 
 // Only logged in users have access to these route,
