@@ -1,17 +1,8 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+@extends('layouts.app')
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+@section('title', 'Game Result')
 
-    <title>Laravel</title>
-
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+@section('css')
 
     <style>
         * {
@@ -113,11 +104,12 @@
 
         }
     </style>
-</head>
 
-<!-- <body> -->
+@endsection()
 
-<body>
+<!-- content -->
+@section('content')
+
     @include('layouts.nav')
 
     <section>
@@ -125,7 +117,7 @@
             <p class="title">Kessler Psychological Distress Inventory (K10)</p>
             <div class="mark">
                 <span class="score">{{ $data }}</span>
-                <span class="total">/100</span>
+                <span class="total">/50</span>
             </div>
             <div class="container2">
                 <p class="title">Result</p>
@@ -152,6 +144,4 @@
 
     @include('layouts.footer')
 
-</body>
-
-</html>
+@endsection

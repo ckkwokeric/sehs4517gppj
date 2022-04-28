@@ -35,7 +35,7 @@ class UsersSeeder extends Seeder
                 'gender' => 'male',
                 'password' => Hash::make('sehs123456'),
                 'phone_no' => '55221234',
-                'dob' => '2000-09-12',
+                'dob' => '2000-09-10',
                 'is_admin' => 1,
             ],
             [
@@ -55,7 +55,17 @@ class UsersSeeder extends Seeder
                 'gender' => 'male',
                 'password' => Hash::make('sehs123456'),
                 'phone_no' => '55221234',
-                'dob' => '2000-09-12',
+                'dob' => '1999-10-28',
+                'is_admin' => null,
+            ],
+            [
+                'first_name' => 'Man Shan',
+                'last_name' => 'HO',
+                'email' => 'hms@gmail.com',
+                'gender' => 'female',
+                'password' => Hash::make('sehs123456'),
+                'phone_no' => '55221234',
+                'dob' => '2001-03-17',
                 'is_admin' => null,
             ],
         ];

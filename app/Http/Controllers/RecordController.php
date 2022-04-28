@@ -35,7 +35,7 @@ class RecordController extends Controller
         $eventEnrollments = EventEnrollment::all();
         $venues = Venue::all();
 
-        
+        $pdfName = date('Y-m-d') . '_System_Report.pdf';
         $pdf = PDF::loadView('pages.account.record',  compact('users', 'events', 'gameHistory', 'eventEnrollments', 'venues'))->setPaper('a3', 'landscape');
 
         return $pdf->download($pdfName);
