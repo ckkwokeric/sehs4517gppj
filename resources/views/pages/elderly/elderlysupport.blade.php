@@ -12,10 +12,6 @@
         font-family: 'Montserrat', sans-serif;
     }
 
-    .container2 {
-        margin: 5%;
-    }
-
     .container2 img {
         width: 100%;
     }
@@ -117,9 +113,6 @@
     }
 
     @media all and (max-width:1045px) {
-        .container2 p {
-            font-size: 26px;
-        }
 
         .container4,
         .container6,
@@ -127,17 +120,18 @@
             flex-wrap: wrap;
         }
 
-        .container5 {
-            width: 100%;
-        }
-
         .container5 .one,
         .container5 .two,
         .container5 .three {
             display: block;
             text-align: center;
-            width: 618px;
-            height: 416px;
+            border-radius: 25px;
+            object-fit: fill;
+        }
+
+        .container5 img {
+            width: 100%;
+
         }
 
         .text {
@@ -153,11 +147,6 @@
         .text p {
             text-align: justify;
         }
-
-        .container5 img {
-            width: 100%;
-            border-radius: 25px;
-        }
     }
 </style>
 
@@ -170,7 +159,7 @@
 
 <!-- content -->
 <div class="container2">
-    <img src="{{ asset('img/elderlysupport/elderlysupport_icon.png') }}" alt=""></img>
+    <img src="{{ asset('img/elderlysupport/elderlysupport_icon.png') }}" alt="">
 </div>
 
 <div class="container3">
@@ -181,7 +170,7 @@
 
 <div class="container4">
     <div class="container5 one">
-        <img src="{{ asset('img/elderlysupport/elderlysupport_1.png') }}" alt=""></img>
+        <img src="{{ asset('img/elderlysupport/elderlysupport_1.png') }}" alt="" width="750px">
     </div>
     <div class="text">
         <div class="title">ACTIVITIES FOR ELDERLY</div>
@@ -211,13 +200,13 @@
         </div>
     </div>
     <div class="container5 two">
-        <img src="{{ asset('img/elderlysupport/elderlysupport_2.png') }}" alt=""></img>
+        <img src="{{ asset('img/elderlysupport/elderlysupport_2.png') }}" alt="" width="750px">
     </div>
 </div>
 
 <div class="container7">
     <div class="container5 three">
-        <img src="{{ asset('img/elderlysupport/elderlysupport_3.png') }}" alt=""></img>
+        <img src="{{ asset('img/elderlysupport/elderlysupport_3.png') }}" alt="" width="750px">
     </div>
     <div class="text">
         <div class="title">WELLING FOR ELDERLY</div>

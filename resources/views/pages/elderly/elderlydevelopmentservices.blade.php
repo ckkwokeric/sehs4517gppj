@@ -12,10 +12,6 @@
         font-family: 'Montserrat', sans-serif;
     }
 
-    .container2 {
-        margin: 5%;
-    }
-
     .container2 img {
         width: 100%;
     }
@@ -49,14 +45,34 @@
         font-weight: 600;
     }
 
+    p {
+        letter-spacing: 1px;
+        line-height: 25px;
+        font-size: 20px;
+    }
+
+    .container6 p,
+    .container7 p {
+        letter-spacing: 1px;
+        line-height: 30px;
+    }
+
     .container4,
+    .one,
     .container5,
     .container6,
     .container7,
-    .container8,
-    .container9,
+    .container8 {
+        margin: 5%;
+        margin-top: 10%;
+    }
+
+    .container9 {
+        margin: 5%;
+        margin-top: 15%;
+    }
+
     .container10 {
-        display: flex;
         margin: 5%;
     }
 
@@ -74,6 +90,8 @@
 
     .container6 .title {
         color: #546687;
+        margin-left: -5%;
+        margin-bottom: -5%;
     }
 
     .container7 .title {
@@ -92,14 +110,24 @@
         color: #5E3B97;
     }
 
-    .container5 .aimg {
-        width: 30%;
-        float: left;
+    .container5 {
+        flex-wrap: flex;
+        display: inline;
     }
 
-    .info .one {
-        width: calc(70%);
-        float: right;
+    .container5 img {
+        width: 30%;
+        float: left;
+        margin: 0 5px 0 5%;
+    }
+
+    .one p {
+        margin-left: 5%;
+        margin-top: -100px;
+    }
+
+    .container6 {
+        display: wrap;
     }
 
     .border1 {
@@ -110,43 +138,76 @@
         margin-top: 10px;
     }
 
+    .conatiner7 {
+        display: wrap;
+    }
+
     .border2 {
         border-width: 3px;
         border-left-style: solid;
         padding: 5px;
         margin: 5%;
         margin-top: 10px;
-        width: 70%;
     }
 
-    .container7 .aimg {
-        width: calc(30%);
+    .aimg7 {
+        width: 15%;
         float: right;
-        margin-left: 5%;
+        margin-right: 10%;
+        margin-top: 80px;
+    }
+
+    .aimg7 img {
+        width: 100%;
+    }
+
+    .conatiner8 {
+        display: wrap;
     }
 
     .info .four {
         width: 50%;
         float: left;
+        margin-top: -10%;
     }
 
-    .container8 .rimg {
-        width: calc(50%);
+    .rimg8 {
+        width: 45%;
         float: right;
+        margin: 5%;
     }
 
-    .info .five {
+    .rimg8 img {
+        width: 100%;
+        border-radius: 35px;
+    }
+
+    .container9 .info .five {
         width: 50%;
         float: left;
     }
 
     .container9 .aimg {
-        width: calc(50%);
+        width: 50%;
         float: right;
+        margin-top: -60px;
     }
 
-    .container10 .title {
+    .container9 .aimg img {
+        width: 100%;
+    }
+
+    .house {
         width: 30%;
+    }
+
+    .house img {
+        width: 100%;
+        opacity: 20%;
+    }
+
+    .info .six {
+        width: 50%;
     }
 
     .five .aimg {
@@ -154,39 +215,72 @@
         float: right;
     }
 
-    .eventname {
-        height: 100px;
+    .wrap {
+        display: wrap;
     }
 
-    .set {
-        height: 432px;
+    .container15 {
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        margin-bottom: 30%;
     }
 
     .set .one {
-        width: 36.3636364%;
-        float: left;
+        display: wrap;
+        background-color: #F3B4B4;
+        height: 100px;
+        width: 443px;
+    }
+
+    .photo1 {
+        position: absolute;
+        width: 443px;
+        height: 336px;
+        margin-top: -22px;
+        margin-left: 42px;
     }
 
     .set .two {
-        width: calc(63.6363637%);
-        float: right;
+        display: wrap;
+        background-color: #F2D19F;
+        height: 100px;
+        width: 349px;
+        margin-top: -56px;
+        margin-left: 42px;
+    }
+
+    .photo2 {
+        position: absolute;
+        width: 349px;
+        height: 336px;
+        margin-left: 42px;
     }
 
     .set .three {
-        width: calc(36.3636364%);
-        float: right;
+        display: wrap;
+        background-color: #B8DB57;
+        height: 100px;
+        width: 437px;
+        margin-top: -56px;
     }
 
-    .eventname .one {
-        background: rgba(243, 180, 180, 0.8);
+    .photo3 {
+        position: absolute;
+        width: 437px;
+        height: 336px;
     }
 
-    .eventname .two {
-        background: rgba(242, 209, 159, 0.8);
+    .container15 p {
+        text-align: center;
+        line-height: 100px;
+        color: #FFFFFF;
+        font-size: 30px;
     }
 
-    .eventname .three {
-        background: rgba(184, 219, 87, 0.8);
+    .container15 img {
+        width: 100%;
     }
 
     .border p,
@@ -196,15 +290,9 @@
         padding: 5px;
     }
 
-    .aimg {
-        margin-left: 30px;
-        margin-top: 5%;
-    }
-
     .rimg {
         margin-right: 30px;
         margin-top: 5%;
-        border-radius: 35px;
     }
 </style>
 
@@ -217,24 +305,24 @@
 
 <!--content-->
 <div class="container2">
-    <img src="{{ asset('img/elderlysupport/elderlydevelopmentservices_icon.png') }}" alt=""></img>
+    <img src="{{ asset('img/elderlysupport/elderlydevelopmentservices_icon.png') }}" alt="">
 </div>
 
 <div class="container3">
     <a href="{{ route('home') }}"> <i class="fa-solid fa-house"></i></a>
     <i class="fa-solid fa-chevron-right"></i>
-    <span class="title"><a href="{{ route('elderlysupport') }}">Elderly Support</a></span>
+    <span class="title"><a herf="{{ route('elderlysupport') }}">Elderly Support</a></span>
     <i class="fa-solid fa-chevron-right"></i>
     <span class="title">Elderly Development Services</span>
 </div>
 
 <div class="container4">
-    <img src="{{ asset('img/elderlysupport/elderlydevelopmentservices1.png') }}" alt=""></img>
+    <img src="{{ asset('img/elderlysupport/elderlydevelopmentservices1.png') }}" alt="">
 </div>
 
-<div class="container5">
-    <div class="aimg">
-        <img src="{{asset('img/elderlysupport/elderlydevelopmentservices2.png') }}" alt=""></img>
+<div class="one">
+    <div class="container5">
+        <img src="{{asset('img/elderlysupport/elderlydevelopmentservices2.png') }}" alt="">
     </div>
     <div class="info one">
         <p>Elderly development services assist elderly people to remain living in the community for as long
@@ -261,6 +349,9 @@
     </div>
 </div>
 
+<div class="aimg7">
+    <img src="{{ asset('img/elderlysupport/elderlydevelopmentservices4.png') }}" alt="">
+</div>
 <div class="container7">
     <div class="container11 two">
         <div class="title">Achievement</div>
@@ -272,11 +363,11 @@
         <p>Over 100 holders of Community Care Service roucher for the Elderly were served by 2 non-subvented day care
             centres</p>
     </div>
-    <div class="aimg">
-        <img src="{{ asset('img/elderlysupport/elderlydevelopmentservices4.png') }}" alt=""></img>
-    </div>
 </div>
 
+<div class="rimg8">
+    <img src="{{ asset('img/elderlysupport/elderlydevelopmentservices5.png') }}" alt="">
+</div>
 <div class="container8">
     <div class="container11 three">
         <div class="title">Elderly centre services</div>
@@ -289,9 +380,7 @@
             <p>Besides, this services also bring them new things, like new friends, different events, new products, etc.
             </p>
         </div>
-        <div class="rimg">
-            <img src="{{ asset('img/elderlysupport/elderlydevelopmentservices5.png') }}" alt=""></img>
-        </div>
+
     </div>
 </div>
 
@@ -299,55 +388,66 @@
     <div class="container11 four">
         <div class="title">Community care services</div>
     </div>
-    <div class="container14">
-        <div class="info five">
-            <p>We have cooperated with community groups in the district and arranged for about 200 volunteers to
-                visit the elderly living alone or chronically ill or two elderly households living in old-style
-                private buildings every month to provide about 100 seniors with health checks, social activities,
-                health education, Emotional support, etc., allow the elderly to obtain health information and
-                community resources, and expand their social and support network.</p>
-        </div>
-        <div class="aimg">
-            <img src="{{ asset('img/elderlysupport/elderlydevelopmentservices7-9.png') }}" alt=""></img>
-        </div>
+    <div class="aimg">
+        <img src="{{ asset('img/elderlysupport/elderlydevelopmentservices7-9.png') }}" alt="">
+    </div>
+    <div class="info five">
+        <p>We have cooperated with community groups in the district and arranged for about 200 volunteers to
+            visit the elderly living alone or chronically ill or two elderly households living in old-style
+            private buildings every month to provide about 100 seniors with health checks, social activities,
+            health education, Emotional support, etc., allow the elderly to obtain health information and
+            community resources, and expand their social and support network.</p>
+    </div>
+    <div class="house">
+        <img src="{{ asset('img/elderlysupport/elderlydevelopmentservices6.png') }}" alt="">
     </div>
 </div>
 
 <div class="container10">
     <div class="container11 five">
         <div class="title">Other support services</div>
-        <div class="aimg">
-            <img src="{{ asset('img/elderlysupport/elderlydevelopmentservices6.png') }}" alt=""></img>
-        </div>
     </div>
     <div class="info six">
         <p>Here are the past support services. Our purpose is hoping the elderly could have their own skills, like
             painting and cooking. If they already contain a special skill like story telling, we would like to gather
             them into a group. Then, helding a event for them to reach thier potential.</p>
     </div>
-    <div class="container15">
+</div>
+
+<div class="container15">
+    <div class="wrap">
         <div class="set one">
             <div class="eventname one">
-                Painting course
-            </div>
-            <div class="aimg">
-                <img src="{{ asset('img/elderlysupport/elderlydevelopmentservices10.png') }}" alt=""></img>
+                <p>Painting course</p>
             </div>
         </div>
+        <div class="photo1">
+            <div class="aimg">
+                <img src="{{ asset('img/elderlysupport/elderlydevelopmentservices10.png') }}" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="wrap">
         <div class="set two">
             <div class="eventname two">
-                Story telling
-            </div>
-            <div class="aimg">
-                <img src="{{ asset('img/elderlysupport/elderlydevelopmentservices11.png') }}" alt=""></img>
+                <p>Story telling</p>
             </div>
         </div>
+        <div class="photo2">
+            <div class="aimg">
+                <img src="{{ asset('img/elderlysupport/elderlydevelopmentservices11.png') }}" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="wrap">
         <div class="set three">
             <div class="eventname three">
-                Cooking course
+                <p>Cooking course</p>
             </div>
+        </div>
+        <div class="photo3">
             <div class="aimg">
-                <img src="{{ asset('img/elderlysupport/elderlydevelopmentservices12.png') }}" alt=""></img>
+                <img src="{{ asset('img/elderlysupport/elderlydevelopmentservices12.png') }}" alt="">
             </div>
         </div>
     </div>

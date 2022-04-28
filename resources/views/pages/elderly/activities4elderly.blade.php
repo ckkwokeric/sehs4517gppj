@@ -12,9 +12,6 @@
         font-family: 'Montserrat', sans-serif;
     }
 
-    .container2 {
-        margin: 5%;
-    }
 
     .container2 img {
         width: 100%;
@@ -51,21 +48,31 @@
 
     .container4,
     .container5,
-    .container6,
-    .container7,
     .container8,
     .container9 {
         margin: 5%;
     }
 
-    .container4,
-    .container5,
-    .container8 {
+    .container4 {
+        color: #4EB4D4;
         flex-wrap: wrap;
+        font-size: 36px;
     }
 
-    .container7 p {
-        margin: 2%;
+    .container5 {
+        flex-wrap: flex;
+        display: inline;
+    }
+
+    .container5 img {
+        width: 25%;
+        margin: 0 5px 0 5%;
+        float: left;
+    }
+
+    .container8 p {
+        padding: 40px;
+        margin-top: -70px;
     }
 
     .content-table {
@@ -110,10 +117,6 @@
         border-bottom: 2px solid #4EB4D4;
     }
 
-    .container10 {
-        margin: 5%;
-    }
-
     .container10 img {
         width: 100%;
     }
@@ -129,13 +132,13 @@
 
 <!--content-->
 <div class="container2">
-    <img src="{{ asset('img/elderlysupport/activities4elderly_icon.png') }}" alt=""></img>
+    <img src="{{ asset('img/elderlysupport/activities4elderly_icon.png') }}" alt="">
 </div>
 
 <div class="container3">
     <a href="{{ route('home') }}"> <i class="fa-solid fa-house"></i></a>
     <i class="fa-solid fa-chevron-right"></i>
-    <span class="title"><a href="{{ route('elderlysupport') }}">Elderly Support</a></span>
+    <span class="title"><a herf="{{ route('elderlysupport') }}">Elderly Support</a></span>
     <i class="fa-solid fa-chevron-right"></i>
     <span class="title">Activities For Elderly</span>
 </div>
@@ -145,30 +148,27 @@
 </div>
 
 <div class="container5">
-    <div class="container6">
-        <img src="{{asset('img/elderlysupport/activities4elderly_healthtalk.png') }}" alt=""></img>
-    </div>
-    <div class="container7">
-        <p>In April, we will have a talk about health care activities.</p>
-
-        <p>Healthy aging is the aspiration of many seniors. In order to achieve good physical and
-            mental health, most of the elderly understand the truth that "prevention is better than
-            cure". What are the ways to prevent physical and mental illness? Not only in Western
-            countries, but also in Chinese areas, the elderly are becoming more and more popular to
-            prevent physical and mental diseases by participating in various health care activities. </p>
-
-        <p>This talk is to let participants understand which wellness activities are suitable for
-            the elderly, and to explain the benefits of various wellness activities on the healthy
-            behavior and emotional well-being of the elderly. In addition, carers may neglect the
-            balance between personal leisure activities and caring work because of their busy caring
-            work. Therefore, this talk will also explore the factors that restrict carers from
-            pursuing leisure activities, and introduce some leisure and health care activities
-            suitable for carers, so that carers can maintain their own physical and mental health
-            while maintaining the physical and mental health of the elderly.</p>
-    </div>
+    <img src="{{asset('img/elderlysupport/activities4elderly_healthtalk.png') }}" alt="">
 </div>
 
 <div class="container8">
+    <p>In April, we will have a talk about health care activities.</p>
+
+    <p>Healthy aging is the aspiration of many seniors. In order to achieve good physical and
+        mental health, most of the elderly understand the truth that "prevention is better than
+        cure". What are the ways to prevent physical and mental illness? Not only in Western
+        countries, but also in Chinese areas, the elderly are becoming more and more popular to
+        prevent physical and mental diseases by participating in various health care activities. </p>
+
+    <p>This talk is to let participants understand which wellness activities are suitable for
+        the elderly, and to explain the benefits of various wellness activities on the healthy
+        behavior and emotional well-being of the elderly. In addition, carers may neglect the
+        balance between personal leisure activities and caring work because of their busy caring
+        work. Therefore, this talk will also explore the factors that restrict carers from
+        pursuing leisure activities, and introduce some leisure and health care activities
+        suitable for carers, so that carers can maintain their own physical and mental health
+        while maintaining the physical and mental health of the elderly.</p>
+
     <p>In response to the latest situation of coronavirus disease 2019 (COVID-19) and the need to
         maintain social distancing, the quota of the health talks in Elderly Health Centres is limited.
         Interested clients can click the button below or contact the Elderly Health Centre for reservation.
@@ -232,8 +232,8 @@
     </table>
 </div>
 
-<div class="comtainer10">
-    <img src="{{asset('img/elderlysupport/activities4elderly_bottom.png') }}" alt=""></img>
+<div class="container10">
+    <img src="{{asset('img/elderlysupport/activities4elderly_bottom.png') }}" alt="">
 </div>
 
 @include('layouts.footer')
