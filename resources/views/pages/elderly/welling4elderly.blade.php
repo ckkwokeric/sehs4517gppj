@@ -454,10 +454,10 @@
             <img src="{{ asset('img/elderlysupport/welling4elderly6.png') }}" alt="">
         </div>
         <div class="container15">
-            <div clsss="title">
-                <p>Which are high calcium foods?</p>
-            </div>
             <div class="aimg">
+                <div style="font-size: 30px;color: #055C88;">
+                    <p>Which are high calcium foods?</p>
+                </div>
                 <img src="{{ asset('img/elderlysupport/welling4elderly6_1.png') }}" alt="">
             </div>
         </div>
